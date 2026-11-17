@@ -60,4 +60,6 @@ Mientras la app esté en beta, cada versión nueva es `1.0.0-beta.2`, `1.0.0-bet
   git push origin :refs/tags/v1.0.0-beta.1
   ```
 
+- **El flujo falla con `./mvnw: Permission denied`**: el repositorio se subió desde Windows y `mvnw` perdió el permiso de ejecución. Se arregla guardando el permiso en git: `git update-index --chmod=+x backend/mvnw`, commit y push.
+
 - **Has publicado una versión con un fallo grave**: no la borres; publica enseguida la siguiente (`beta.2` o `x.y.z+1`) con la corrección y explícalo en sus notas.

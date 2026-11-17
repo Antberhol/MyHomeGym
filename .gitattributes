@@ -1,1 +1,4 @@
 * text=auto eol=lf
+# Los scripts de Windows necesitan CRLF para que cmd.exe interprete bien sus etiquetas.
+*.cmd text eol=crlf
+*.bat text eol=crlf
