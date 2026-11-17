@@ -1,0 +1,1266 @@
+{
+  "languageSelection": {
+    "title": "Choose your language",
+    "subtitle": "Select the main language for the app"
+  },
+  "auth": {
+    "tagline": "Log every set from your home gym. Your data stays on your own server.",
+    "loginTab": "Sign in",
+    "registerTab": "Create account",
+    "username": "Username",
+    "usernameHint": "3 to 40 characters: letters, numbers, dot or dash.",
+    "password": "Password",
+    "passwordHint": "At least 8 characters.",
+    "displayName": "Display name (optional)",
+    "submitLogin": "Sign in",
+    "submitRegister": "Create account",
+    "working": "Checking…",
+    "logout": "Sign out",
+    "signedInAs": "Signed in as {{name}}",
+    "accountMenu": "Account menu",
+    "serverDown": "Cannot reach the server. Start the backend (cd backend && ./mvnw spring-boot:run) and try again.",
+    "heroAlt": "Olympic barbell loaded with coloured plates"
+  },
+  "common": {
+    "menu": "Menu",
+    "backToCatalog": "← Back to catalog",
+    "notFoundDetailedInfo": "Detailed information was not found for this exercise",
+    "translating": "Translating...",
+    "noDescription": "No description",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "edit": "Edit",
+    "retry": "Retry",
+    "back": "Back",
+    "loading": "Loading"
+  },
+  "a11y": {
+    "noImageAvailable": "No image available",
+    "noImageFor": "No image available for {{name}}",
+    "exerciseGifAlt": "GIF of {{name}}",
+    "streakBadgeTitle": "Current streak: {{days}} consecutive days",
+    "streakBadgeAria": "Streak of {{days}} days and {{weeks}} weeks. {{total}} total workouts."
+  },
+  "numberStepper": {
+    "valueLabel": "value",
+    "decreaseAria": "Decrease {{label}}",
+    "increaseAria": "Increase {{label}}"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "train": "Train",
+    "routines": "Routines",
+    "catalog": "Catalog",
+    "progress": "Progress",
+    "profile": "Profile",
+    "settings": "Settings",
+    "home": "Home"
+  },
+  "units": {
+    "kg": "kg",
+    "lb": "lb",
+    "cm": "cm",
+    "in": "in"
+  },
+  "bodyDiagram": {
+    "title": "Body diagram",
+    "subtitle": "Review muscle balance by period.",
+    "range": {
+      "aria": "Select time range",
+      "week": "Week",
+      "month": "Month",
+      "total": "All time"
+    }
+  },
+  "sync": {
+    "noCloud": "No cloud",
+    "offline": "Offline",
+    "syncing": "Syncing...",
+    "error": "Sync error",
+    "synced": "Synced"
+  },
+  "appShell": {
+    "goToAria": "Go to {{label}}",
+    "toggleSidebarAria": "Toggle side menu",
+    "primaryNavAria": "Primary navigation",
+    "mobileNavAria": "Mobile navigation"
+  },
+  "exerciseDetail": {
+    "alias": "EN alias",
+    "target": "Target muscle",
+    "equipment": "Equipment",
+    "secondaryMuscles": "Secondary muscles",
+    "instructions": "Step-by-step instructions",
+    "instructionsInEnglish": "Instructions in English",
+    "invalidExercise": "Invalid exercise.",
+    "requestedExerciseNotFound": "The requested exercise was not found.",
+    "exerciseLoadFailed": "The exercise could not be loaded.",
+    "gifAlt": "GIF of {{name}}",
+    "notes": {
+      "title": "Personal notes",
+      "placeholder": "Write your own notes for this exercise...",
+      "save": "Save note",
+      "saved": "Saved",
+      "error": "Couldn't save the note. Try again."
+    },
+    "progress": {
+      "title": "My progress",
+      "range": {
+        "4w": "4 weeks",
+        "3m": "3 months",
+        "1y": "1 year",
+        "all": "All time"
+      },
+      "empty": "You have not logged this exercise yet.",
+      "maxWeight": "Max weight per session",
+      "oneRm": "Estimated 1RM",
+      "recentSessions": "Recent sessions",
+      "sets": "sets",
+      "maxSet": "Max: {{weight}}kg × {{reps}}",
+      "prsTitle": "Exercise PRs",
+      "noPrs": "No PRs have been logged for this exercise yet."
+    },
+    "howTo": "How to do it",
+    "muscles": "Muscles",
+    "primary": "Primary",
+    "secondaryShort": "Secondary",
+    "level": "Level",
+    "mechanic": "Mechanic",
+    "force": "Force",
+    "category": "Category",
+    "originalName": "Original name: {{name}}",
+    "machineTranslated": "Steps translated automatically. If you spot a mistake, propose a fix in the repository.",
+    "notTranslated": "Automatic translation is not available right now, so the steps are shown in English.",
+    "noSteps": "This exercise has no instructions.",
+    "history": "Your history",
+    "noHistory": "You have not logged this exercise yet.",
+    "source": "Source: free-exercise-db (public domain)",
+    "custom": "Your exercise",
+    "frame": "Position {{n}} of {{total}}",
+    "levels": {
+      "basico": "Beginner",
+      "intermedio": "Intermediate",
+      "avanzado": "Advanced"
+    },
+    "musclesLegend": "Filled: main muscles. Outlined: secondary.",
+    "bestWeight": "Best weight",
+    "sessions": "Sessions"
+  },
+  "dashboard": {
+    "common": {
+      "exercise": "Exercise",
+      "and": "and",
+      "minAbbrev": "min"
+    },
+    "weekdays": {
+      "domingo": "sunday",
+      "lunes": "monday",
+      "martes": "tuesday",
+      "miercoles": "wednesday",
+      "jueves": "thursday",
+      "viernes": "friday",
+      "sabado": "saturday"
+    },
+    "weekdayLookup": {
+      "sun": "domingo",
+      "mon": "lunes",
+      "tue": "martes",
+      "wed": "miercoles",
+      "thu": "jueves",
+      "fri": "viernes",
+      "sat": "sabado"
+    },
+    "stats": {
+      "trainings7d": "Workouts (7d)",
+      "trainedMinutes": "Trained minutes",
+      "totalVolume7d": "Total volume (7d)",
+      "routines": "Routines",
+      "totalSessions": "Total sessions",
+      "totalSetsWeek": "Sets this week",
+      "avgDuration30d": "Avg time (30d)",
+      "context": {
+        "thisWeek": "this week",
+        "totalAvailable": "available"
+      }
+    },
+    "activityFeed": {
+      "title": "Recent activity",
+      "empty": "No recent activity yet.",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "daysAgo": "{{count}} days ago",
+      "prBadge": "🏆 {{count}} PR"
+    },
+    "recentSessions": {
+      "title": "Recent sessions",
+      "empty": "No workouts logged yet.",
+      "volumeLabel": "Volume: {{volume}} kg",
+      "copyWhatsapp": "Copy for WhatsApp",
+      "copyExcel": "Copy for Excel",
+      "editSets": "Edit sets",
+      "editorTitle": "Saved sets editor",
+      "recalculateVolume": "Recalculate volume",
+      "editorEmpty": "No sets were recorded for this session.",
+      "seriesNumber": "Set {{number}}"
+    },
+    "smartPlan": {
+      "title": "Smart plan for today",
+      "currentDay": "Current day",
+      "recommendedRoutine": "Recommended routine: {{name}}",
+      "priorityCoverage": "Priority muscle coverage: {{coverage}} exercise(s)",
+      "priorityGroups": "Priority groups this week: {{groups}}",
+      "insufficientData": "insufficient data",
+      "noRoutineForToday": "There are no active routines scheduled for today. Activate or create a routine to receive an automatic recommendation."
+    },
+    "prs": {
+      "title": "Recent personal records",
+      "empty": "No PRs logged yet.",
+      "globalSession": "Global session"
+    },
+    "achievements": {
+      "title": "Achievements and badges",
+      "firstSession": "First session completed",
+      "totalTrainings5": "5 total workouts",
+      "totalTrainings20": "20 total workouts",
+      "totalVolume10k": "10,000 kg accumulated",
+      "totalVolume50k": "50,000 kg accumulated",
+      "unlocked": "Unlocked",
+      "pending": "Pending"
+    },
+    "greeting": "Today: {{day}}",
+    "subtitle": "Ready to train?",
+    "streak": {
+      "title": "Streak",
+      "days": "days",
+      "week": "This week: {{count}}",
+      "total": "Total"
+    },
+    "startWorkout": "Start workout",
+    "hero": {
+      "title": "Your best set from the last session",
+      "empty": "No sets logged yet. The bar is empty: load it in your first workout.",
+      "reps": "{{count}} reps",
+      "plates": "Per side: {{plates}}",
+      "barOnly": "Bar only"
+    }
+  },
+  "muscleGroups": {
+    "chest": "Chest",
+    "back": "Back",
+    "legs": "Legs",
+    "core": "Core",
+    "arms": "Arms",
+    "shoulders": "Shoulders",
+    "pecho": "Chest",
+    "espalda": "Back",
+    "piernas": "Legs",
+    "hombros": "Shoulders",
+    "brazos": "Arms",
+    "biceps": "Biceps",
+    "triceps": "Triceps",
+    "antebrazos": "Forearms"
+  },
+  "exerciseSelector": {
+    "title": "Select exercises",
+    "searchPlaceholder": "Search exercise...",
+    "allGroup": "All",
+    "mostUsed": "Most used",
+    "typeAll": "Type: all",
+    "typeStrength": "Strength",
+    "typeCardio": "Cardio",
+    "typeMobility": "Mobility",
+    "typeStretching": "Stretching",
+    "add": "Add",
+    "added": "Added",
+    "emptyWithFilters": "No exercises match those filters.",
+    "selectedCount": "Selected: {{count}}",
+    "confirm": "Confirm"
+  },
+  "sortableExerciseList": {
+    "exerciseNotFound": "Exercise not found",
+    "summary": "{{series}} sets · {{reps}} reps · {{rest}}s rest",
+    "dragExerciseAria": "Drag exercise",
+    "moveUpAria": "Move exercise up",
+    "moveDownAria": "Move exercise down"
+  },
+  "onboarding": {
+    "title": "Tell us about you",
+    "subtitle": "We use your weight and height to work out your BMI. You can change it later in Profile.",
+    "nameLabel": "Name (optional)",
+    "namePlaceholder": "What should we call you?",
+    "weightLabel": "Body weight (kg)",
+    "heightLabel": "Height (cm)",
+    "waistLabel": "Waist (cm, optional)",
+    "chestLabel": "Chest (cm, optional)",
+    "legLabel": "Leg (cm, optional)",
+    "estimatedImcTitle": "Your estimated BMI",
+    "back": "Back",
+    "next": "Next",
+    "start": "Start"
+  },
+  "imcStatus": {
+    "underweight": "Underweight",
+    "normal": "Normal",
+    "overweight": "Overweight",
+    "obesity": "Obesity"
+  },
+  "muscleDistribution": {
+    "title": "Muscle distribution",
+    "empty": "No sets have been logged yet to calculate distribution."
+  },
+  "muscleHeatmap": {
+    "title": "Muscle heatmap (7d)",
+    "subtitle": "Intensity by absolute mixed score (weekly volume + day frequency), from gray to deep red.",
+    "views": {
+      "front": "Front",
+      "back": "Back"
+    },
+    "levels": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "veryHigh": "Very high"
+    }
+  },
+  "workoutShare": {
+    "totalVolume": "Total volume",
+    "time": "Time",
+    "sets": "Sets",
+    "prs": "PRs",
+    "title": "Workout done"
+  },
+  "pwa": {
+    "reloadPrompt": {
+      "title": "New version available",
+      "update": "Update"
+    }
+  },
+  "plateCalculator": {
+    "title": "Plate calculator",
+    "targetWeight": "Target weight (kg)",
+    "barWeight": "Bar weight (kg)",
+    "resultTitle": "Result",
+    "totalLoaded": "Total loaded weight: {{total}} kg",
+    "difference": "Difference from target: {{remainder}} kg",
+    "perSide": "Per side: {{value}}",
+    "noPlates": "no plates",
+    "barVisualization": "Bar visualization",
+    "leftPlateAria": "Left plate {{plate}}kg",
+    "rightPlateAria": "Right plate {{plate}}kg",
+    "eachSide": "On each side",
+    "closest": "Not exact with these plates. Closest: {{total}} kg."
+  },
+  "oneRepMax": {
+    "estimatedLabel": "Estimated 1RM",
+    "estimatedEmpty": "Estimated 1RM: —"
+  },
+  "restTimerOverlay": {
+    "label": "Rest"
+  },
+  "progress": {
+    "title": "Progress",
+    "hero": {
+      "streak": "Streak",
+      "totalWorkouts": "Total workouts",
+      "weeklyVolume": "Weekly volume",
+      "currentWeight": "Current weight",
+      "topOneRm": "Top 1RM",
+      "noData": "—"
+    },
+    "tabs": {
+      "summary": "Summary",
+      "strength": "Strength",
+      "body": "Body",
+      "prs": "PRs"
+    },
+    "summary": {
+      "daysTrained": "Days trained",
+      "weeklyVolume": "Weekly volume",
+      "weeklySets": "Weekly sets"
+    },
+    "units": {
+      "days": "days",
+      "sets": "sets"
+    },
+    "muscleDistribution": {
+      "title": "Muscle distribution",
+      "subtitle": "Based on your last 30 days of training."
+    },
+    "weeklyVolume": {
+      "title": "Weekly volume",
+      "subtitle": "Last 12 weeks",
+      "empty": "Not enough data yet."
+    },
+    "strength": {
+      "exerciseSelector": "Exercise",
+      "topPrs": "Top PRs (max weight)",
+      "noPrs": "No max weight PRs.",
+      "comparisonTitle": "1RM comparison",
+      "recent": "Recent",
+      "thirtyDaysAgo": "30 days ago",
+      "notEnoughData": {
+        "title": "Not enough data",
+        "body": "Log at least 3 sessions for this exercise to see its trend."
+      }
+    },
+    "body": {
+      "weight90d": "Weight (90d)",
+      "bmi": "BMI (90d)",
+      "measurements": "Measurements",
+      "waist": "Waist",
+      "chest": "Chest",
+      "leg": "Leg",
+      "biceps": "Biceps",
+      "shoulders": "Shoulders",
+      "calf": "Calf"
+    },
+    "weekLabel": {
+      "currentShort": "Now"
+    },
+    "unknownExercise": "Unknown exercise",
+    "prFilter": {
+      "all": "All",
+      "weight": "Weight",
+      "volume": "Volume",
+      "reps": "Reps"
+    },
+    "prFeed": {
+      "empty": "No PRs yet. Keep training and you'll see them here."
+    },
+    "prTypes": {
+      "peso_maximo": "Max weight",
+      "volumen_total": "Total volume",
+      "reps_mismo_peso": "Reps at same weight",
+      "volumen_serie": "Volume per set"
+    },
+    "sections": {
+      "weightImc": "Weight and BMI",
+      "volumePerSession": "Volume per session",
+      "heatmapFrequency": "Frequency heatmap (10 weeks)",
+      "oneRmCalculator": "1RM calculator (Epley)",
+      "oneRmEvolution": "1RM evolution by exercise",
+      "sessionCalculators": "Session calculators",
+      "consistencyRecommendations": "Consistency and recommendations",
+      "bodyDiagram": "Body diagram",
+      "prPanel": "PR panel"
+    },
+    "range": {
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "1m": "1 month",
+      "3m": "3 months",
+      "6m": "6 months",
+      "all": "All"
+    },
+    "tooltip": {
+      "volumeLabel": "Volume",
+      "date": "Date"
+    },
+    "legend": {
+      "weight": "Weight",
+      "imc": "BMI"
+    },
+    "charts": {
+      "cintura": "Waist progression",
+      "pecho": "Chest progression",
+      "pierna": "Leg diameter progression",
+      "biceps": "Biceps progression",
+      "hombros": "Shoulders progression",
+      "pantorrilla": "Calf progression"
+    },
+    "scaleNote": "Auto scale: minimum 10,000 kg, expanded if you exceed that volume in a single session.",
+    "heatmap": {
+      "cellTitle": "{{date}}: {{count}} workout(s)",
+      "darkerLegend": "Darker means more workouts on that day.",
+      "legend": {
+        "none": "None",
+        "low": "Low",
+        "moderate": "Moderate",
+        "high": "High"
+      }
+    },
+    "placeholders": {
+      "weightKg": "Weight (kg)",
+      "repetitions": "Repetitions",
+      "weightKgCompact": "Weight kg",
+      "minutes": "Min",
+      "met": "MET"
+    },
+    "oneRmEstimated": "Estimated 1RM",
+    "oneRmEvolution": {
+      "selectExercise": "Select an exercise",
+      "noData": "Select an exercise with at least 3 logs to see its 1RM evolution.",
+      "rmLabel": "Estimated 1RM"
+    },
+    "estimatedVolume": "Estimated volume",
+    "estimatedCalories": "Estimated calories",
+    "labels": {
+      "volume": "Volume",
+      "calories": "Calories"
+    },
+    "currentStreak": "Current streak",
+    "dayCount": "{{count}} day(s)",
+    "groupsToPrioritize30d": "Groups to prioritize (30d)",
+    "mostWorked30d": "Most worked groups (30d)",
+    "insufficientData": "Insufficient data.",
+    "bodyDiagram": {
+      "sourceLabel": "Color source",
+      "sourceReal": "real workouts from the last 30 days",
+      "sourceEstimated": "estimate based on your routines",
+      "front": "Front",
+      "back": "Back",
+      "detailByGroup": "Group detail",
+      "levelLabel": "Level",
+      "selectPrompt": "Select a group in either figure to see details.",
+      "levelValues": {
+        "basico": "Basic",
+        "medio": "Medium",
+        "avanzado": "Advanced",
+        "experto": "Expert"
+      }
+    },
+    "pr": {
+      "topMaxWeight": "Top max weight",
+      "emptyMaxWeight": "No max weight PRs.",
+      "topVolumePerSet": "Top volume per set",
+      "emptyVolumePerSet": "No volume-per-set PRs.",
+      "topRepsSameWeight": "Top reps at same weight",
+      "emptyRepetitions": "No repetition PRs.",
+      "topTotalSessionVolume": "Top total session volume",
+      "emptyTotalVolume": "No total volume PRs.",
+      "recentHistory": "Recent PR history",
+      "emptyRecent": "No PRs logged yet.",
+      "newBadge": "NEW",
+      "type": {
+        "peso_maximo": "Max weight",
+        "volumen_serie": "Volume per set",
+        "reps_mismo_peso": "Reps at same weight",
+        "volumen_total": "Total volume"
+      }
+    },
+    "sharePr": {
+      "button": "Share",
+      "copied": "Copied!",
+      "text": "💪 New personal record on {{exerciseName}}! {{type}}: {{value}} kg — MyHomeGym"
+    },
+    "muscleLabels": {
+      "pecho": "Chest",
+      "hombros": "Shoulders",
+      "biceps": "Biceps",
+      "triceps": "Triceps",
+      "antebrazo": "Forearm",
+      "core": "Core",
+      "oblicuos": "Obliques",
+      "trapecio": "Trapezius",
+      "espalda-alta": "Upper back",
+      "espalda-baja": "Lower back",
+      "cuadriceps": "Quadriceps",
+      "isquiotibial": "Hamstring",
+      "gluteo": "Glute",
+      "gemelo": "Calf",
+      "aductor": "Adductor",
+      "abductor": "Abductor"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "accountCloudTitle": "Account",
+    "accountCloudDescription": "Your data lives on the MyHomeGym server you run yourself. Nobody else can see it.",
+    "localMaintenanceTitle": "Data",
+    "localMaintenanceDescription": "Delete everything you have logged in your account. This cannot be undone: export a backup first if you need one.",
+    "clearLocalData": "Delete all my data",
+    "languageTitle": "Language",
+    "currentLanguage": "Current language",
+    "spanish": "Spanish",
+    "english": "English",
+    "languageChangedEs": "Language changed to Spanish.",
+    "languageChangedEn": "Language changed to English.",
+    "units": {
+      "title": "Units",
+      "description": "Choose how weight and body measurements are displayed.",
+      "metric": "Metric (kg, cm)",
+      "imperial": "Imperial (lb, in)",
+      "updated": "Units updated.",
+      "updateFailed": "Could not update units.",
+      "noProfile": "No profile found to save units."
+    },
+    "notificationsTitle": "Notifications",
+    "notificationsDescription": "Enable local reminders to stay consistent with training.",
+    "enableNotifications": "Enable notifications",
+    "sendTest": "Send test",
+    "backupJsonTitle": "Full backup (JSON)",
+    "backupJsonDescription": "Export and import all app data in JSON format (routines, trainings, PRs, measurements, etc.).",
+    "exportBackupJson": "Export JSON backup",
+    "importBackupJson": "Import JSON backup",
+    "pdfSummaryTitle": "PDF summary",
+    "pdfSummaryDescription": "Generate a PDF summary of your progress: profile, trainings, PRs and body measurements.",
+    "generatePdfSummary": "Generate PDF summary",
+    "csvExportTitle": "CSV export",
+    "csvExportDescription": "Export and import trainings in CSV for external analysis.",
+    "exportTrainingsCsv": "Export trainings CSV",
+    "importTrainingsCsv": "Import trainings CSV"
+  },
+  "training": {
+    "pageTitle": "Train",
+    "registerTitle": "Log workout",
+    "plateCalculator": "Plate calculator",
+    "confirmDiscard": "Are you sure you want to discard this workout? Unsaved data will be lost.",
+    "freeTraining": "Free training",
+    "durationPlaceholder": "Duration (min)",
+    "manualVolumePlaceholder": "Manual total volume (kg)",
+    "notesPlaceholder": "Notes",
+    "guidedTitle": "Routine-guided workout",
+    "guidedDescription": "Fields are prefilled with each exercise's last record. You can edit them freely.",
+    "freeLogTitle": "Detailed log (free training)",
+    "freeLogDescription": "Add exercises and log each set with reps and weight. If you don't log sets, you can use manual volume.",
+    "selectExercise": "Select exercise",
+    "setsPlaceholder": "Sets",
+    "addExercise": "Add exercise",
+    "exercise": "Exercise",
+    "addSet": "+ Set",
+    "remove": "Remove",
+    "delete": "delete",
+    "setNumber": "Set {{number}}",
+    "repsPlaceholder": "Reps",
+    "weightPlaceholder": "Weight",
+    "noFreeExercises": "You haven't added exercises to the free log yet.",
+    "saveWorkout": "Save workout",
+    "selector": {
+      "title": "Select your training",
+      "description": "Choose a routine to start in guided mode or use free training.",
+      "freeTitle": "Free training",
+      "freeDescription": "No predefined routine",
+      "startRoutine": "Start workout",
+      "noRoutines": "You don't have routines yet. You can start free training."
+    },
+    "controls": {
+      "sessionTimer": "Session timer",
+      "pause": "Pause",
+      "resume": "Resume",
+      "useForDuration": "Use for duration",
+      "restTimer": "Rest timer",
+      "reset": "Reset",
+      "finishWorkout": "Finish workout",
+      "discardWorkout": "Discard workout"
+    },
+    "summary": {
+      "title": "Workout summary",
+      "share": "Share",
+      "duration": "Duration",
+      "min": "min",
+      "volume": "Volume",
+      "sets": "Sets",
+      "newPrs": "New PRs",
+      "sharePreview": "Share preview",
+      "exerciseNotes": "Exercise notes",
+      "breakdownByExercise": "Breakdown by exercise",
+      "noBreakdown": "No logged sets were found to show a breakdown.",
+      "setsLower": "sets",
+      "finishAndExit": "Finish and exit"
+    },
+    "exerciseCard": {
+      "previous": "Previous",
+      "next": "Next",
+      "exerciseCount": "Exercise {{current}} of {{total}}",
+      "exercise": "Exercise",
+      "gifAlt": "GIF of {{name}}",
+      "gifIncorrect": "Wrong GIF",
+      "seriesRepsLine": "{{series}} sets · target {{reps}}",
+      "setChip": "Set {{number}}",
+      "summary": "{{index}}. {{name}} · {{series}} sets · target {{reps}}",
+      "lastRecord": "Last record ({{date}})",
+      "suggestedLoad": "Suggested load:",
+      "applySuggestion": "Apply suggestion to all sets",
+      "nextPrTarget": "Next PR target",
+      "maxWeight": "Max weight",
+      "beatValue": "beat {{value}}",
+      "volumePerSet": "Volume per set",
+      "repsSameWeight": "Reps at same weight",
+      "setNumber": "Set {{number}}",
+      "previousSet": "Previous",
+      "repsShort": "reps",
+      "rpeLabel": "RPE",
+      "rpePlaceholder": "RPE (1-10)",
+      "rpeToggle": "RPE",
+      "setTypeToggle": "Change set type ({{type}})",
+      "previousInline": "Previous: {{weight}}kg × {{reps}}",
+      "copyPrevious": "Copy",
+      "exerciseNotesLabel": "Exercise notes",
+      "exerciseNotesPlaceholder": "Add a note for this exercise...",
+      "setTypeLabel": "Type",
+      "setTypeOptionAria": "Set type: {{type}}",
+      "setTypes": {
+        "normal": "Normal",
+        "warmup": "Warm-up",
+        "dropset": "Dropset",
+        "failure": "Failure"
+      },
+      "feedback": {
+        "saved": "Session saved: {{sets}} sets logged, volume {{volumeKg}} kg, {{prs}} new PRs.",
+        "shareSuccess": "Summary shared successfully.",
+        "shareDownloaded": "Summary image downloaded.",
+        "shareFailed": "Could not share the summary. Check permissions or install html2canvas."
+      },
+      "startRest": "Start rest ({{seconds}}s)",
+      "recentHistory": "Recent exercise history",
+      "noHistory": "There are no previous sessions for this exercise yet."
+    },
+    "feedback": {
+      "saved": "Workout saved: {{sets}} sets and {{volumeKg}} kg.",
+      "shareSuccess": "Summary shared.",
+      "shareDownloaded": "Summary image downloaded.",
+      "shareFailed": "Could not share the summary. Try downloading the image.",
+      "saveFailed": "The workout couldn't be saved. It's still open: check your connection and tap Finish again."
+    }
+  },
+  "catalog": {
+    "title": "Exercise catalog",
+    "searchPlaceholder": "Search exercise...",
+    "all": "all",
+    "allLevels": "all levels",
+    "levelBasic": "basic",
+    "levelIntermediate": "intermediate",
+    "levelAdvanced": "advanced",
+    "results": "Results: {{count}}",
+    "target": "Target",
+    "tapForInfo": "Tap for more info",
+    "viewDetail": "View detail",
+    "edit": "Edit",
+    "delete": "Delete",
+    "namePlaceholder": "Name",
+    "musclePlaceholder": "Muscle group",
+    "equipmentPlaceholder": "Equipment",
+    "instructionsPlaceholder": "Instructions",
+    "save": "Save",
+    "cancel": "Cancel",
+    "createCustomTitle": "Create custom exercise",
+    "saveExercise": "Save exercise"
+  },
+  "routines": {
+    "title": "My routines",
+    "newRoutine": "New routine",
+    "routineNamePlaceholder": "Routine name",
+    "daysPlaceholder": "monday,wednesday,friday",
+    "descriptionPlaceholder": "Description",
+    "createRoutine": "Create routine",
+    "namePlaceholder": "Name",
+    "manageExercises": "Manage exercises",
+    "deactivate": "Deactivate",
+    "activate": "Activate",
+    "builderTitle": "Routine builder",
+    "addExercise": "+ Add exercise",
+    "restPlaceholder": "Rest (s)",
+    "noExercises": "This routine has no assigned exercises yet.",
+    "confirmDelete": "Confirm delete",
+    "cancelDelete": "Cancel",
+    "folders": {
+      "title": "Folders",
+      "create": "+ Folder",
+      "newTitle": "New folder",
+      "editTitle": "Edit folder",
+      "namePlaceholder": "Folder name",
+      "descriptionPlaceholder": "Description",
+      "colorLabel": "Color",
+      "delete": "Delete",
+      "noFolder": "Uncategorized",
+      "defaultName": "Folder",
+      "uncategorized": "Uncategorized"
+    },
+    "templates": {
+      "title": "Starter templates",
+      "description": "Create a baseline routine with recommended exercises in one click.",
+      "useTemplate": "Use template",
+      "toastSuccess": "Template applied: {{name}}",
+      "items": {
+        "fullBody3d": {
+          "name": "Full Body 3 days",
+          "description": "Balanced full-body plan to build strength and muscle with steady frequency."
+        },
+        "pushPullLegs": {
+          "name": "Push Pull Legs",
+          "description": "Classic split by movement pattern for higher weekly training volume."
+        },
+        "upperLower4d": {
+          "name": "Upper Lower 4 days",
+          "description": "Upper/lower split with a strong balance of stimulus and recovery."
+        },
+        "fuerza5x5": {
+          "name": "Strength 5x5",
+          "description": "Heavy compound-focused template to drive consistent strength gains."
+        }
+      }
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "notFound": "Profile information was not found.",
+    "currentData": "Current data",
+    "name": "Name",
+    "noName": "No name",
+    "weight": "Weight",
+    "height": "Height",
+    "imc": "BMI",
+    "appearance": "Appearance",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "themeAutoTime": "Auto (time)",
+    "localData": "Local data",
+    "localDataDescription": "Export or import all your data (profile, routines, workouts, measurements and PRs) in JSON format.",
+    "exportBackup": "Export backup",
+    "importBackup": "Import backup",
+    "backupExportedAt": "Backup exported ({{date}}).",
+    "backupImported": "Backup imported successfully. The app will reload to reflect changes.",
+    "backupImportError": "Could not import backup."
+  },
+  "measurements": {
+    "profile": {
+      "editButton": "Edit profile",
+      "formTitle": "Edit profile data",
+      "fields": {
+        "nombre": "Name",
+        "pesoCorporal": "Body weight",
+        "altura": "Height"
+      },
+      "saveButton": "Save changes",
+      "cancelButton": "Cancel",
+      "invalidData": "Please review weight and height values.",
+      "savedSuccessfully": "Profile updated successfully.",
+      "saveFailed": "Could not update profile."
+    },
+    "form": {
+      "sectionTitle": "Log new measurement",
+      "fields": {
+        "pesoCorporal": "Body weight",
+        "cintura": "Waist",
+        "pecho": "Chest",
+        "diametroPierna": "Leg diameter",
+        "biceps": "Biceps",
+        "hombros": "Shoulders",
+        "pantorrilla": "Calf"
+      },
+      "submitButton": "Save measurement",
+      "invalidWeight": "Enter a valid body weight.",
+      "invalidOptionalValues": "Optional fields must contain valid numbers.",
+      "savedSuccessfully": "Measurement logged successfully",
+      "saveFailed": "Could not log measurement."
+    },
+    "history": {
+      "title": "Measurement history",
+      "empty": "No measurements recorded yet.",
+      "columns": {
+        "fecha": "Date",
+        "peso": "Weight",
+        "imc": "BMI",
+        "cintura": "Waist",
+        "pecho": "Chest",
+        "pierna": "Leg",
+        "biceps": "Biceps",
+        "hombros": "Shoulders",
+        "pantorrilla": "Calf",
+        "actions": "Actions"
+      },
+      "deleteButton": "Delete",
+      "emptyValue": "—",
+      "deletedSuccessfully": "Measurement deleted successfully.",
+      "deleteFailed": "Could not delete measurement."
+    }
+  },
+  "format": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysAgo_one": "{{count}} day ago",
+    "daysAgo_other": "{{count}} days ago"
+  },
+  "exercisePicker": {
+    "group": "Muscle group",
+    "results_one": "{{count}} exercise",
+    "results_other": "{{count}} exercises",
+    "addCount_one": "Add {{count}} exercise",
+    "addCount_other": "Add {{count}} exercises",
+    "addCount_zero": "Pick exercises"
+  },
+  "weekdays": {
+    "short": {
+      "lunes": "M",
+      "martes": "T",
+      "miercoles": "W",
+      "jueves": "T",
+      "viernes": "F",
+      "sabado": "S",
+      "domingo": "S"
+    },
+    "long": {
+      "lunes": "Monday",
+      "martes": "Tuesday",
+      "miercoles": "Wednesday",
+      "jueves": "Thursday",
+      "viernes": "Friday",
+      "sabado": "Saturday",
+      "domingo": "Sunday"
+    }
+  },
+  "workout": {
+    "sets": "Sets",
+    "setShort": "Set",
+    "previous": "Previous",
+    "reps": "Reps",
+    "done": "Done",
+    "close": "Done",
+    "setOptions": "Options for set {{number}}",
+    "weightOfSet": "Weight for set {{number}}",
+    "repsOfSet": "Reps for set {{number}}",
+    "completeSet": "Mark set {{number}} as done",
+    "undoSet": "Unmark set {{number}}",
+    "setTitle": "Set {{number}}",
+    "setType": "Set type",
+    "warmupHint": "Warm-up sets do not count towards volume.",
+    "rpe": "Effort (RPE)",
+    "rpeHint": "10 is the limit: you could not do a single extra rep.",
+    "removeSet": "Remove this set",
+    "skipRest": "Skip",
+    "elapsed": "Workout time: {{time}}",
+    "more": "More options",
+    "options": "Workout options",
+    "finish": "Finish",
+    "setsDone": "{{done}} of {{total}} sets done",
+    "removeExercise": "Remove {{name}}",
+    "addSet": "Add set",
+    "addNote": "Add note",
+    "suggestion": "Last time you hit every rep: add 2.5 kg (up to {{weight}} kg).",
+    "useSuggestion": "Add",
+    "exerciseList": "Routine exercises",
+    "exerciseComplete": "complete",
+    "target": "{{series}} × {{reps}}, rest {{rest}} s",
+    "nextExercise": "Next: {{name}}",
+    "lastExercise": "This is the last exercise",
+    "freeEmptyTitle": "Add your first exercise",
+    "freeEmptyText": "Search the catalog. If you did it before, the sets come filled in with last time.",
+    "todayRoutine": "Today",
+    "exerciseCount_one": "{{count}} exercise",
+    "exerciseCount_other": "{{count}} exercises",
+    "start": "Start",
+    "freeDescription": "Pick exercises as you go.",
+    "otherRoutines": "Other routines",
+    "yourRoutines": "Your routines",
+    "noRoutinesTitle": "No routines yet",
+    "noRoutinesText": "Create one from scratch or start from a template like Full Body or Push Pull Legs.",
+    "goToRoutines": "Go to routines",
+    "savedEyebrow": "Workout saved",
+    "savedTitle": "Good work",
+    "records": "Records",
+    "recordsText_one": "You set {{count}} personal record this session.",
+    "recordsText_other": "You set {{count}} personal records this session.",
+    "setsCount_one": "{{count}} set",
+    "setsCount_other": "{{count}} sets",
+    "pickSubtitle": "Start your routine or train freestyle."
+  },
+  "home": {
+    "week": "Last 7 days",
+    "sessions": "Workouts",
+    "streak_one": "{{count}} day in a row",
+    "streak_other": "{{count}} days in a row",
+    "streakNone": "No streak yet",
+    "volume": "Volume",
+    "sets": "Sets",
+    "time": "Time",
+    "recent": "Recent sessions",
+    "recentEmptyTitle": "No sessions yet",
+    "recentEmptyText": "Your first workout will show up here.",
+    "recordsShort_one": "{{count}} record",
+    "recordsShort_other": "{{count}} records",
+    "records": "Your records",
+    "seeAll": "See all",
+    "trainedToday": "You already trained today. Up for another one?",
+    "todayRoutine": "Today is {{name}}.",
+    "noRoutineToday": "No routine planned for today.",
+    "startRoutine": "Start {{name}}"
+  },
+  "session": {
+    "copied": "Copied",
+    "copyText": "Copy text",
+    "copyCsv": "Copy CSV",
+    "minutes_one": "{{count}} minute",
+    "minutes_other": "{{count}} minutes"
+  },
+  "routineForm": {
+    "editTitle": "Edit routine",
+    "name": "Name",
+    "namePlaceholder": "For example, Push day",
+    "days": "Days",
+    "daysHint": "Home and Train will suggest it on those days.",
+    "color": "Colour",
+    "description": "Description",
+    "descriptionPlaceholder": "Optional",
+    "folder": "Folder",
+    "active": "Active",
+    "activeHint": "Paused routines are not suggested for training.",
+    "paused": "Paused",
+    "delete": "Delete routine",
+    "deleteConfirm": "Yes, delete",
+    "deleteWarning": "The routine and its exercise list are deleted. Past workouts are kept.",
+    "folderDeleteHint": "Deleting the folder moves its routines to No folder.",
+    "useTemplate_one": "Use ({{count}} exercise)",
+    "useTemplate_other": "Use ({{count}} exercises)",
+    "series": "Sets",
+    "reps": "Target reps",
+    "repsHint": "A number (5) or a range (8-12).",
+    "rest": "Rest between sets",
+    "removeExercise": "Remove from routine",
+    "dragHandle": "Move {{name}}",
+    "subtitle_zero": "Create your first routine or use a template.",
+    "subtitle_one": "{{count}} routine",
+    "subtitle_other": "{{count}} routines",
+    "emptyTitle": "No routines yet",
+    "emptyText": "Create one from scratch or start with a template below.",
+    "folderEmpty": "Empty folder. Move routines here when editing them.",
+    "noFolderTitle": "No folder",
+    "notFound": "This routine no longer exists.",
+    "start": "Start this routine",
+    "exercises_one": "{{count}} exercise",
+    "exercises_other": "{{count}} exercises",
+    "add": "Add",
+    "reorderHint": "Press and hold the handle on the left and drag to reorder."
+  },
+  "colors": {
+    "e5383b": "Red",
+    "2f6fde": "Blue",
+    "f2c230": "Yellow",
+    "2ba36b": "Green",
+    "e9e7e2": "White",
+    "8b9097": "Steel"
+  },
+  "catalogPage": {
+    "title": "Exercises",
+    "subtitle": "{{count}} exercises with photos and instructions.",
+    "filters": "Filters",
+    "filtersCount_zero": "Filters",
+    "filtersCount_one": "Filters: {{count}} active",
+    "filtersCount_other": "Filters: {{count}} active",
+    "clear": "Clear",
+    "show_one": "Show {{count}} exercise",
+    "show_other": "Show {{count}} exercises",
+    "equipment": "Equipment",
+    "anyLevel": "Any",
+    "mine": "Mine",
+    "showMore": "Show more ({{count}} left)",
+    "emptyTitle": "No exercise matches",
+    "emptyText": "Try another word or clear filters. If it does not exist, create it."
+  },
+  "customExercise": {
+    "newTitle": "New exercise",
+    "editTitle": "Edit exercise",
+    "namePlaceholder": "For example, TRX row",
+    "group": "Muscle group",
+    "equipment": "Equipment",
+    "equipmentPlaceholder": "For example, TRX",
+    "instructions": "How to do it",
+    "instructionsPlaceholder": "One step per line",
+    "delete": "Delete exercise"
+  },
+  "bodyMap": {
+    "frontal": "Front",
+    "posterior": "Back",
+    "less": "Less",
+    "more": "More",
+    "zoneVolume": "{{volume}} kg of volume",
+    "zoneNone": "not trained in this period",
+    "untrained": "Not trained: {{zones}}.",
+    "zones": {
+      "pecho": "Chest",
+      "hombros": "Shoulders",
+      "biceps": "Biceps",
+      "triceps": "Triceps",
+      "antebrazo": "Forearms",
+      "core": "Abs",
+      "trapecio": "Traps",
+      "espalda-alta": "Lats",
+      "espalda-baja": "Lower back",
+      "gluteo": "Glutes",
+      "cuadriceps": "Quads",
+      "isquiotibial": "Hamstrings",
+      "gemelo": "Calves",
+      "aductor": "Adductors",
+      "abductor": "Abductors"
+    }
+  },
+  "progressPage": {
+    "subtitle_zero": "Your numbers will show up after your first workout.",
+    "subtitle_one": "{{count}} workout logged.",
+    "subtitle_other": "{{count}} workouts logged.",
+    "sections": "Progress sections",
+    "tabs": {
+      "summary": "Summary",
+      "strength": "Strength",
+      "records": "Records",
+      "body": "Body"
+    },
+    "thisWeek": "This week",
+    "sessionsUnit_one": "workout",
+    "sessionsUnit_other": "workouts",
+    "noPrevious": "No data for last week",
+    "vsLastWeek": "{{delta}}% vs last week",
+    "weeklyVolume": "Weekly volume",
+    "weeklyVolumeHint": "Kilos lifted each week, warm-ups excluded. This week in yellow.",
+    "now": "Now",
+    "muscles": "Muscles worked",
+    "musclesHint": "Last 30 days. Tap an area to see its volume.",
+    "musclesHintLong": "Colour is relative to your most trained muscle in the period. Secondary muscles count 35%.",
+    "byPeriod": "By period",
+    "ranges": {
+      "week": "7 days",
+      "month": "30 days",
+      "quarter": "90 days",
+      "total": "All time"
+    },
+    "noStrengthTitle": "No strength data yet",
+    "noStrengthText": "Log weighted sets and your estimated 1RM will show here.",
+    "best1rm": "Best 1RM",
+    "lastSet": "Last time",
+    "change": "Change",
+    "oneSession": "One session is not a curve yet. Come back after your next workout.",
+    "oneRmHint": "Estimated 1RM using the Epley formula from your best set each day.",
+    "addMeasurement": "Add measurement",
+    "noBodyTitle": "No measurements",
+    "noBodyText": "Log your weight and measurements in Profile to see how they change.",
+    "bodyWeight": "Body weight",
+    "current": "Current",
+    "since": "since {{date}}",
+    "recordType": "Record type",
+    "types": {
+      "peso_maximo": "Heaviest weight",
+      "reps_mismo_peso": "Reps",
+      "volumen_serie": "Best set",
+      "volumen_total": "Session"
+    },
+    "typeHints": {
+      "peso_maximo": "The heaviest you have lifted on each exercise.",
+      "reps_mismo_peso": "Most reps with the same weight.",
+      "volumen_serie": "The set with the most weight times reps.",
+      "volumen_total": "The session with the most total volume."
+    },
+    "repsAt": "reps at {{weight}} kg",
+    "wholeSession": "Whole session",
+    "emptyTitle": "No workouts yet",
+    "emptyText": "Your weekly volume and the muscles you train will show up here.",
+    "goTrain": "Go train"
+  },
+  "profilePage": {
+    "subtitle": "Your details and measurements. Trends are in Progress, Body tab.",
+    "add": "New",
+    "emptyText": "Log your weight weekly at the same time of day to see the trend.",
+    "optionalHint": "Measurements are optional. Always measure at the same spot.",
+    "deleteMeasurement": "Delete the {{date}} measurement"
+  },
+  "settingsPage": {
+    "signedInAs": "Signed in as {{name}}.",
+    "genericError": "That did not work. Try again.",
+    "language": "Language",
+    "notifications": "Reminders",
+    "notificationsHint": "Your browser sends reminders; allow them first.",
+    "streakWarning": "Streak reminder",
+    "streakWarningHint": "If you are on a 3-day streak and have not trained today, you get a reminder at {{hour}}:00.",
+    "streakHour": "Reminder time",
+    "restAlert": "Rest finished",
+    "restAlertHint": "Alerts you when rest ends even if you switched apps.",
+    "allow": "Allow reminders",
+    "test": "Send a test",
+    "testBody": "This is how MyHomeGym reminders look.",
+    "testSent": "Test reminder sent.",
+    "permissionGranted": "Reminders allowed.",
+    "permissionDenied": "The browser did not allow it. Check the site permissions.",
+    "data": "Your data",
+    "dataHint": "They live on your MyHomeGym server. Back them up now and then.",
+    "exportJson": "Download full backup",
+    "exportJsonHint": "Profile, routines, workouts, measurements and records in one JSON file.",
+    "importJson": "Restore a backup",
+    "importJsonHint": "Adds what is missing; keeps what you already have.",
+    "exportCsv": "Download workouts as CSV",
+    "exportCsvHint": "To open in Excel or Google Sheets.",
+    "importCsv": "Import workouts from CSV",
+    "exportPdf": "Download PDF summary",
+    "exportPdfHint": "Profile, workouts, records and measurements, ready to print.",
+    "exported": "File downloaded.",
+    "importedJson": "Backup restored: {{imported}} records added and {{skipped}} already present.",
+    "importedCsv_one": "Imported {{count}} workout.",
+    "importedCsv_other": "Imported {{count}} workouts.",
+    "account": "Account",
+    "deleteAll": "Delete all my data",
+    "deleteAllHint": "This cannot be undone. Download a backup first.",
+    "deleteAllConfirm": "Your routines, workouts, measurements and records will be deleted. Are you sure?"
+  },
+  "notifications": {
+    "streakTitle": "MyHomeGym 🔥",
+    "streakBody_one": "You're on a {{count}}-day streak. Train today to keep it going.",
+    "streakBody_other": "You're on a {{count}}-day streak. Train today to keep it going.",
+    "restBody": "Rest over. Next set.",
+    "unsupported": "This browser doesn't support notifications.",
+    "notGranted": "The browser hasn't allowed notifications."
+  },
+  "errors": {
+    "cannotConnect": "Can't reach the server. Check that the backend is running.",
+    "serverDown": "The server isn't responding. Check that the backend is running.",
+    "USERNAME_TAKEN": "That username is already taken.",
+    "TOO_MANY_ATTEMPTS": "Too many failed attempts. Wait 15 minutes and try again.",
+    "BAD_CREDENTIALS": "Wrong username or password.",
+    "SESSION_EXPIRED": "Your session has expired. Sign in again.",
+    "VALIDATION": "Some of the data isn't valid. Check it and try again.",
+    "BAD_JSON": "The file or data sent isn't in the expected format.",
+    "NOT_FOUND": "That item no longer exists. It may have been deleted.",
+    "DUPLICATE_ID": "That was already saved.",
+    "generic": "Something went wrong. Try again.",
+    "loginFailed": "Couldn't sign in.",
+    "registerFailed": "Couldn't create the account.",
+    "unknown": "Unknown error",
+    "invalidBackupFile": "That file isn't a MyHomeGym backup."
+  },
+  "pdf": {
+    "title": "Training summary",
+    "generatedOn": "Generated on {{date}}",
+    "profile": "Profile",
+    "name": "Name",
+    "noName": "No name",
+    "weight": "Weight",
+    "height": "Height",
+    "bmi": "BMI",
+    "stats": "Overall stats",
+    "totalTrainings": "Workouts",
+    "totalTime": "Total time",
+    "hours": "{{count}} h",
+    "totalVolume": "Total volume",
+    "records": "Personal records",
+    "activeRoutines": "Active routines",
+    "recentTrainings": "Latest workouts",
+    "date": "Date",
+    "duration": "Duration",
+    "volume": "Volume",
+    "notes": "Notes",
+    "exercise": "Exercise",
+    "type": "Type",
+    "value": "Mark",
+    "unknownExercise": "Deleted exercise",
+    "measurements": "Measurement history",
+    "waist": "Waist",
+    "chest": "Chest",
+    "page": "MyHomeGym · Page {{page}} of {{total}}"
+  },
+  "share": {
+    "title": "MyHomeGym · Workout result",
+    "text": "Today's session on MyHomeGym 💪"
+  },
+  "sessionText": {
+    "defaultTitle": "Workout",
+    "duration": "Duration: {{minutes}} min",
+    "volume": "Total volume: {{kg}} kg",
+    "csvHeader": "Date,Routine,Exercise,Set,Weight,Reps,DurationMin,TotalVolumeKg"
+  },
+  "errorScreen": {
+    "title": "Something went wrong",
+    "body": "An unexpected error occurred. You can try again or clear the cache to recover the app.",
+    "retry": "Try again",
+    "clear": "Clear cache and reload",
+    "workoutKept": "Your workout in progress is kept when you clear the cache. If the error comes back, discard it.",
+    "discardWorkout": "Discard workout in progress"
+  }
+}

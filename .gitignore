@@ -1,0 +1,28 @@
+# Dependencias y builds
+node_modules
+frontend/dist
+backend/target
+# El frontend compilado que se copia dentro del backend se genera con `npm run build:backend`
+backend/src/main/resources/static
+
+# Datos locales del backend (base de datos H2 y clave JWT): nunca al repositorio
+backend/data
+data/
+*.mv.db
+*.trace.db
+jwt-secret.key
+
+# Entorno
+.env
+.env.local
+*.local
+
+# Logs
+*.log
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.iml

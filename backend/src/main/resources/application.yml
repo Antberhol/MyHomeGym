@@ -1,0 +1,52 @@
+# Configuración de MyHomeGym. Todo funciona en local: la base de datos es un fichero H2
+# dentro de app.data-dir. Cualquier valor se puede sobrescribir con variables de entorno,
+# por ejemplo APP_TRANSLATION_PROVIDER=none o SERVER_PORT=9090.
+server:
+  port: 8080
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: myhomegym
+  datasource:
+    url: jdbc:h2:file:${app.data-dir}/myhomegym;AUTO_SERVER=FALSE
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: false
+  jackson:
+    default-property-inclusion: non_null
+
+app:
+  # Carpeta donde se guardan la base de datos y la clave JWT. No se sube al repositorio.
+  data-dir: ${MYHOMEGYM_DATA_DIR:./data}
+  jwt:
+    # Vacío: se genera una clave aleatoria en data-dir/jwt-secret.key la primera vez.
+    secret: ${MYHOMEGYM_JWT_SECRET:}
+    access-ttl-minutes: 15
+    refresh-ttl-days: 30
+    issuer: myhomegym
+  cookies:
+    # Ponlo a true si sirves la app por HTTPS.
+    secure: false
+  cors:
+    # Solo hace falta para el servidor de desarrollo de Vite si no usas su proxy.
+    allowed-origins:
+      - http://localhost:5173
+      - http://localhost:4173
+  translation:
+    # mymemory (gratis, sin clave), libretranslate (tu propia instancia) o none.
+    provider: mymemory
+    # Opcional: un correo de contacto amplía la cuota diaria gratuita de MyMemory.
+    email: ""
+    url: http://localhost:5000
+    api-key: ""
+    timeout-seconds: 8
+  catalog:
+    image-base-url: https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/

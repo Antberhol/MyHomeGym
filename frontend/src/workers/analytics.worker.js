@@ -1,0 +1,105 @@
+/// <reference lib="webworker" />
+
+function normalizeKey(value) {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .trim()
+}
+
+function toDateKey(isoDate) {
+  const date = new Date(isoDate)
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+function mapGroupToMuscles(group) {
+  const normalized = normalizeKey(group)
+
+  if (['pecho', 'pectoral', 'pectorales'].includes(normalized)) return ['pecho']
+  if (['espalda', 'dorsales'].includes(normalized)) return ['espalda-alta', 'espalda-baja', 'trapecio']
+  if (['trapecio', 'trapecios', 'cuello'].includes(normalized)) return ['trapecio']
+  if (['espalda media'].includes(normalized)) return ['espalda-alta']
+  if (['zona lumbar', 'lumbar', 'lumbares'].includes(normalized)) return ['espalda-baja']
+  if (['hombro', 'hombros', 'deltoides'].includes(normalized)) return ['hombros']
+  if (['biceps'].includes(normalized)) return ['biceps']
+  if (['triceps'].includes(normalized)) return ['triceps']
+  if (['antebrazo', 'antebrazos'].includes(normalized)) return ['antebrazo']
+  if (['core', 'abdomen', 'abdominales', 'abs'].includes(normalized)) return ['core']
+  if (['oblicuos'].includes(normalized)) return ['oblicuos']
+  if (['pierna', 'piernas'].includes(normalized)) return ['cuadriceps', 'isquiotibial', 'gluteo', 'gemelo']
+  if (['cuadriceps'].includes(normalized)) return ['cuadriceps']
+  if (['femorales', 'isquios', 'isquiotibial', 'isquiotibiales'].includes(normalized)) return ['isquiotibial']
+  if (['gluteo', 'gluteos'].includes(normalized)) return ['gluteo']
+  if (['gemelo', 'gemelos', 'pantorrilla', 'pantorrillas'].includes(normalized)) return ['gemelo']
+  if (['aductor', 'aductores'].includes(normalized)) return ['aductor']
+  if (['abductor', 'abductores'].includes(normalized)) return ['abductor']
+
+  return [normalized]
+}
+
+const DEFAULT_MUSCLE_ANALYTICS = {
+  pecho: { volume: 0, daysTrained: 0 },
+  hombros: { volume: 0, daysTrained: 0 },
+  biceps: { volume: 0, daysTrained: 0 },
+  triceps: { volume: 0, daysTrained: 0 },
+  antebrazo: { volume: 0, daysTrained: 0 },
+  core: { volume: 0, daysTrained: 0 },
+  oblicuos: { volume: 0, daysTrained: 0 },
+  trapecio: { volume: 0, daysTrained: 0 },
+  'espalda-alta': { volume: 0, daysTrained: 0 },
+  'espalda-baja': { volume: 0, daysTrained: 0 },
+  cuadriceps: { volume: 0, daysTrained: 0 },
+  isquiotibial: { volume: 0, daysTrained: 0 },
+  gluteo: { volume: 0, daysTrained: 0 },
+  gemelo: { volume: 0, daysTrained: 0 },
+  aductor: { volume: 0, daysTrained: 0 },
+  abductor: { volume: 0, daysTrained: 0 },
+}
+
+function computeAnalytics(sets, exercises) {
+  const exerciseMuscleMap = new Map(
+    exercises.map((exercise) => [exercise.id, mapGroupToMuscles(exercise.grupoMuscularPrimario)]),
+  )
+
+  const volumeByMuscle = {}
+  const daysByMuscle = {}
+
+  for (const item of sets) {
+    const muscles = exerciseMuscleMap.get(item.ejercicioId) ?? []
+    if (muscles.length === 0) continue
+
+    const volume = item.pesoUtilizado * item.repeticionesRealizadas
+    const distributedVolume = volume / muscles.length
+    const dayKey = toDateKey(item.fecha)
+
+    for (const muscle of muscles) {
+      volumeByMuscle[muscle] = (volumeByMuscle[muscle] ?? 0) + distributedVolume
+      if (!daysByMuscle[muscle]) {
+        daysByMuscle[muscle] = new Set()
+      }
+      daysByMuscle[muscle].add(dayKey)
+    }
+  }
+
+  return Object.keys(DEFAULT_MUSCLE_ANALYTICS).reduce(
+    (acc, muscle) => {
+      acc[muscle] = {
+        volume: Number((volumeByMuscle[muscle] ?? 0).toFixed(2)),
+        daysTrained: daysByMuscle[muscle]?.size ?? 0,
+      }
+      return acc
+    },
+    { ...DEFAULT_MUSCLE_ANALYTICS },
+  )
+}
+
+self.onmessage = (event) => {
+  const { requestId, sets, exercises } = event.data
+  const analytics = computeAnalytics(sets, exercises)
+  const payload = { requestId, analytics }
+  self.postMessage(payload)
+}

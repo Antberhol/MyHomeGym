@@ -1,0 +1,55 @@
+MyHomeGym
+Copyright (C) 2026 Antonio M. Bernaza Holgado
+
+Este programa es software libre: puedes redistribuirlo y modificarlo bajo los
+términos de la Licencia Pública General de GNU, publicada por la Free Software
+Foundation, en su versión 3 o (a tu elección) cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA
+GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o de ADECUACIÓN
+A UN PROPÓSITO PARTICULAR. Consulta la Licencia Pública General de GNU para más
+detalles. El texto completo de la licencia está en el fichero LICENSE.
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version. This program is distributed WITHOUT ANY WARRANTY. See the LICENSE file.
+
+SPDX-License-Identifier: GPL-3.0-or-later
+
+
+Nombre y logotipo
+-----------------
+
+La licencia cubre el código. El nombre "MyHomeGym" y su icono identifican al
+proyecto original: si distribuyes una versión modificada, ponle otro nombre y
+otro icono, e indica que deriva de MyHomeGym, para que nadie la confunda con la
+original.
+
+
+Componentes de terceros
+-----------------------
+
+MyHomeGym incluye o usa los siguientes trabajos de terceros, cada uno bajo su
+propia licencia:
+
+* free-exercise-db (datos e imágenes del catálogo de ejercicios)
+  https://github.com/yuhonas/free-exercise-db
+  Dominio público (The Unlicense).
+  Los datos están en backend/src/main/resources/catalog/exercises/, con los
+  nombres traducidos al español por este proyecto. Las imágenes se cargan
+  desde el repositorio original.
+
+* js-rich-body-highlighter (figura anatómica del mapa muscular)
+  Licencia MIT.
+
+* Barlow, de Jeremy Tribby, y Big Shoulders Display, de Patric King
+  (tipografías, distribuidas a través de Fontsource)
+  SIL Open Font License 1.1.
+
+* Bibliotecas de código abierto del frontend (React, Vite, Tailwind CSS,
+  Recharts, jsPDF, i18next, Zod, Zustand, dnd-kit, Lucide, entre otras) y del
+  backend (Spring Boot, Hibernate, H2, Jackson), bajo licencias MIT, ISC, BSD,
+  Apache-2.0, LGPL-2.1 o MPL-2.0. La lista completa, con versiones, está en
+  frontend/package-lock.json y backend/pom.xml; el texto de cada licencia
+  acompaña a cada paquete.

@@ -1,0 +1,18 @@
+/*
+ * Paleta de MyHomeGym: violeta sobre fondo casi negro con un toque morado.
+ * Los valores son canales RGB separados por espacios para que Tailwind pueda aplicar
+ * opacidad (bg-gym-accent/20). Cambiar de paleta = cambiar este bloque.
+ */
+:root {
+  --gym-accent: 146 132 250; /* #9284FA */
+  --gym-accent-light: 172 160 252;
+  --gym-accent-dim: 112 96 224;
+  --gym-on-accent: 18 16 30;
+
+  --gym-black: 15 14 20; /* #0F0E14 */
+  --gym-bg: 20 19 27; /* #14131B */
+  --gym-card: 29 28 38;
+  --gym-card-2: 37 36 48;
+  --gym-border: 48 47 61;
+  --gym-border-2: 60 59 75;
+}
