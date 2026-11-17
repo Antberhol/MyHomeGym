@@ -77,6 +77,7 @@ Con EVO-02 dejan de aplicar en Android: RI-01, FR-1.01 a FR-1.04, RN-1.01 a RN-1
 | MEJ-06 | Quedan 5 avisos de seguridad leves o moderados en herramientas de desarrollo (vite, vite-plugin-pwa); arreglarlos exige una versión incompatible. No afectan a lo que se entrega al usuario. | RNF-1.09 | Resuelta en la 2.2: `glob` forzado a una versión corregida (RNF-1.09) |
 | MEJ-07 | "Borrar caché y recargar", en la pantalla de error, borra también un entreno en curso. | RNF-2.02 | Resuelta en la 2.2 (RN-6.14): se conserva y se puede descartar aparte |
 | MEJ-08 | El asistente inicial se saltaba el paso del IMC: al pulsar Siguiente en el segundo paso, el formulario se enviaba. | FR-1.05, AC-1.7 | Resuelta en la 2.2 |
+| MEJ-09 | Con la app en inglés, el mapa muscular solo marcaba bíceps y tríceps: el resto de músculos llegaban en inglés y no se reconocían. Afecta a la 1.0.0-beta.1. | RN-4.10, FR-4.10 | Resuelta en la 2.3 (RN-4.16) |
 
 ## 11.7 Riesgos
 

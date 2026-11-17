@@ -17,6 +17,10 @@ Todos los cambios relevantes de MyHomeGym. El formato sigue [Keep a Changelog](h
 - Insignias en el README (CI, versión, licencia y tecnologías).
 - Plantillas de GitHub para issues (fallo, mejora y traducción) y para pull requests, con la lista de comprobación de `AGENTS.md`.
 
+### Corregido
+
+- Con la app en inglés, el mapa muscular solo marcaba bíceps y tríceps; ahora reconoce todos los músculos en los dos idiomas.
+
 ## [1.0.0-beta.1] - 2026-11-17
 
 Primera versión pública, en fase beta.

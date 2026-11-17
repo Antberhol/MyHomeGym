@@ -40,6 +40,7 @@
 | RN-4.13 | Cada grupo dibujado en la figura corresponde a una zona de la app. Aductores y abductores no están dibujados, pero sí aparecen en las listas. |
 | RN-4.14 | Volúmenes de 10.000 kg o más se muestran en toneladas. |
 | RN-4.15 | **Corregir una sesión pasada recalcula los récords** de esa sesión y de todas las posteriores, en orden, como si cada una se acabase de guardar con las series ya corregidas (RN-4.05 a RN-4.09). Los récords de sesiones anteriores no cambian, y los de sesiones que ya no existen se conservan y cuentan como marca a batir. Las series, el volumen y los récords se guardan en una sola transacción: o se guarda todo o no cambia nada. |
+| RN-4.16 | El mapa muscular da el mismo resultado con la app en español y en inglés: los músculos del catálogo se reconocen en los dos idiomas. |
 
 ## Pruebas de aceptación
 
@@ -98,3 +99,9 @@
 - **Entonces** el volumen de esa sesión pasa a 300 kg, el récord de peso del día 10 es 60 kg y la sesión del día 12 recupera su récord de 65 kg.
 - **Y** si el guardado falla a medias, no cambia nada: ni la serie, ni el volumen, ni los récords.
 - *Automatizado:* `session-correction.test.js › una errata de 100 kg deja de ser récord y la sesión posterior recupera el suyo`, `TrainingCorrectionApiTest.correctingASessionUpdatesSetsVolumeAndRecordsTogether` y `TrainingCorrectionApiTest.anInvalidCorrectionChangesNothing`. Verificado además con prueba de navegador (17/11/2026).
+
+### AC-4.10: Mapa muscular con la app en inglés
+- **Dado** un usuario con la app en inglés que ha hecho press de banca y sentadillas en los últimos 30 días.
+- **Cuando** abre el diagrama corporal.
+- **Entonces** el pecho y los cuádriceps aparecen trabajados, igual que con la app en español, y no solo los bíceps y los tríceps.
+- *Automatizado:* `body-figure.test.js › el mapa muscular funciona igual con el catálogo en inglés y en español (RN-4.16)`. Verificado además con prueba de navegador (17/11/2026).
