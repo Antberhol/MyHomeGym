@@ -25,8 +25,26 @@ export const BODY_ZONES = [
   'abductor',
 ]
 
-/** Músculo del catálogo (en español, sin tildes) → zona del diagrama. */
+/**
+ * Músculo del catálogo → zona del diagrama, sin tildes. El catálogo llega en el idioma de la app,
+ * así que están los nombres en español y en inglés (RN-4.16).
+ */
 const MUSCLE_TO_ZONE = {
+  abdominals: 'core',
+  chest: 'pecho',
+  shoulders: 'hombros',
+  neck: 'trapecio',
+  forearms: 'antebrazo',
+  lats: 'espalda-alta',
+  'middle back': 'espalda-alta',
+  'lower back': 'espalda-baja',
+  traps: 'trapecio',
+  glutes: 'gluteo',
+  quadriceps: 'cuadriceps',
+  hamstrings: 'isquiotibial',
+  calves: 'gemelo',
+  adductors: 'aductor',
+  abductors: 'abductor',
   abdominales: 'core',
   core: 'core',
   pecho: 'pecho',

@@ -1,6 +1,13 @@
 import { MUSCLE_GROUPS } from 'js-rich-body-highlighter'
 import { describe, expect, it } from 'vitest'
-import { BODY_ZONES, FIGURE_GROUPS, figureHighlights, zoneOfFigureGroup } from '../../src/utils/muscleMap'
+import {
+  BODY_ZONES,
+  FIGURE_GROUPS,
+  figureHighlights,
+  volumeByZone,
+  zoneOf,
+  zoneOfFigureGroup,
+} from '../../src/utils/muscleMap'
 
 describe('figura anatómica', () => {
   it('cada grupo dibujado en la figura corresponde a una zona de la app', () => {
@@ -20,5 +27,66 @@ describe('figura anatómica', () => {
     expect(byGroup.calves).toBeUndefined()
     expect(byGroup.chest.intensity).toBeGreaterThan(byGroup.triceps.intensity)
     expect(byGroup.abs.intensity).toBe(byGroup.obliques.intensity)
+  })
+
+  it('el mapa muscular funciona igual con el catálogo en inglés y en español (RN-4.16)', () => {
+    // Los 17 músculos de free-exercise-db, tal como llegan con lang=en y con lang=es.
+    const english = [
+      'abdominals',
+      'abductors',
+      'adductors',
+      'biceps',
+      'calves',
+      'chest',
+      'forearms',
+      'glutes',
+      'hamstrings',
+      'lats',
+      'lower back',
+      'middle back',
+      'neck',
+      'quadriceps',
+      'shoulders',
+      'traps',
+      'triceps',
+    ]
+    const spanish = [
+      'abdominales',
+      'abductores',
+      'aductores',
+      'bíceps',
+      'gemelos',
+      'pecho',
+      'antebrazos',
+      'glúteos',
+      'isquiotibiales',
+      'dorsales',
+      'zona lumbar',
+      'espalda media',
+      'cuello',
+      'cuádriceps',
+      'hombros',
+      'trapecios',
+      'tríceps',
+    ]
+    english.forEach((muscle, i) => {
+      expect(zoneOf(muscle)).not.toBeNull()
+      expect(zoneOf(muscle)).toBe(zoneOf(spanish[i]))
+    })
+
+    const set = {
+      ejercicioId: 'Barbell_Bench_Press_-_Medium_Grip',
+      pesoUtilizado: 80,
+      repeticionesRealizadas: 5,
+    }
+    const bench = (musculosPrimarios, gruposMuscularesSecundarios) =>
+      new Map([
+        [set.ejercicioId, { grupoMuscularPrimario: 'pecho', musculosPrimarios, gruposMuscularesSecundarios }],
+      ])
+    const en = volumeByZone([set], bench(['chest'], ['shoulders', 'triceps']))
+    const es = volumeByZone([set], bench(['pecho'], ['hombros', 'tríceps']))
+    expect(en).toEqual(es)
+    expect(en.pecho).toBe(400)
+    expect(en.hombros).toBe(140)
   })
 })

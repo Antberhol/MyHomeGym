@@ -95,7 +95,7 @@ Requisitos funcionales sin caso de uso: FR-6.11. FR-6.11 (instalar como PWA) se 
 | `prs.test.js` (9 casos) | AC-4.2, AC-4.8, RN-4.05, RN-4.06, RN-4.07, RN-4.08, RN-4.09 |
 | `calculations.test.js` (20 casos) | AC-1.7, AC-4.3, RN-1.09, RN-3.07, RN-4.04 |
 | `ui-rules.test.js` (8 casos) | AC-2.5, AC-4.1, AC-4.4, RN-2.02, RN-2.03, RN-4.03, RN-4.10, RN-4.11, RN-4.14, RNF-3.05 |
-| `body-figure.test.js` (3 casos) | AC-4.4, RN-4.12, RN-4.13 |
+| `body-figure.test.js` (4 casos) | AC-4.4, AC-4.10, RN-4.10, RN-4.12, RN-4.13, RN-4.16 |
 | `theme.test.js` (2 casos) | RNF-4.01, RNF-4.02 |
 | `backup-and-notes.test.js` (8 casos) | AC-2.8, AC-5.6, AC-6.3, RN-2.09, RN-5.10, RN-5.11, RN-6.02 |
 | `notifications.test.js` (1 caso) | AC-6.6, RN-6.07, RN-6.09 |
@@ -152,12 +152,13 @@ Requisitos funcionales sin caso de uso: FR-6.11. FR-6.11 (instalar como PWA) se 
 | RN-4.07 | Automatizada (prs.test.js, session-correction.test.js) |
 | RN-4.08 | Automatizada (prs.test.js, session-correction.test.js) |
 | RN-4.09 | Automatizada (prs.test.js) |
-| RN-4.10 | Automatizada (ui-rules.test.js) |
+| RN-4.10 | Automatizada (body-figure.test.js, ui-rules.test.js) |
 | RN-4.11 | Automatizada (ui-rules.test.js) |
 | RN-4.12 | Automatizada (body-figure.test.js) |
 | RN-4.13 | Automatizada (body-figure.test.js) |
 | RN-4.14 | Automatizada (ui-rules.test.js) |
 | RN-4.15 | Automatizada (TrainingCorrectionApiTest, session-correction.test.js) |
+| RN-4.16 | Automatizada (body-figure.test.js) |
 | RN-5.01 | Automatizada (CatalogFilesTest) |
 | RN-5.02 | Automatizada (CatalogFilesTest) |
 | RN-5.03 | Automatizada (CatalogAndTranslationTest, CatalogFilesTest) |
@@ -186,7 +187,7 @@ Requisitos funcionales sin caso de uso: FR-6.11. FR-6.11 (instalar como PWA) se 
 | RN-6.13 | Manual (ver la prueba de aceptación del módulo) |
 | RN-6.14 | Automatizada (browser-cache.test.js) |
 
-**62 de 74 reglas** tienen al menos un test automático. Las 12 restantes se comprueban con pruebas de aceptación manuales.
+**63 de 75 reglas** tienen al menos un test automático. Las 12 restantes se comprueban con pruebas de aceptación manuales.
 
 ## 13.5 Cobertura de las pruebas de aceptación
 
@@ -231,6 +232,7 @@ Requisitos funcionales sin caso de uso: FR-6.11. FR-6.11 (instalar como PWA) se 
 | AC-4.7 | Manual |
 | AC-4.8 | Automatizada |
 | AC-4.9 | Automatizada |
+| AC-4.10 | Automatizada |
 | AC-5.1 | Automatizada |
 | AC-5.2 | Automatizada |
 | AC-5.3 | Manual |
@@ -253,4 +255,4 @@ Requisitos funcionales sin caso de uso: FR-6.11. FR-6.11 (instalar como PWA) se 
 | AC-6.11 | Prueba de navegador (17/11/2026) |
 | AC-6.12 | Automatizada |
 
-**43 de 60 pruebas** están automatizadas o verificadas con una prueba de navegador.
+**44 de 61 pruebas** están automatizadas o verificadas con una prueba de navegador.
