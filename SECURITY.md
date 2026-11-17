@@ -1,24 +1,26 @@
-# Seguridad
+# Security
 
-## Versiones con soporte
+**English** · [Español](SECURITY.es.md)
 
-MyHomeGym está en beta. Solo se corrigen fallos en la última versión publicada en *Releases*.
+## Supported versions
 
-## Cómo avisar de un problema de seguridad
+MyHomeGym is in beta. Only the latest version published under *Releases* gets fixes.
 
-No abras una issue pública con los detalles. Usa **Security → Report a vulnerability** en este repositorio (aviso privado de GitHub) e indica qué versión usas, cómo reproducirlo y qué impacto tiene. Recibirás respuesta en cuanto sea posible; es un proyecto mantenido por una sola persona en su tiempo libre.
+## Reporting a security issue
 
-## Qué datos maneja la app
+Please don't open a public issue with the details. Use **Security → Report a vulnerability** in this repository (GitHub's private reporting) and include the version you use, how to reproduce it and its impact. You'll get an answer as soon as possible; this is a project maintained by one person in their free time.
 
-- **Todo se guarda en tu equipo**, en la carpeta `data/` desde la que arrancas el servidor: la base de datos H2 (cuentas, entrenos, medidas, notas) y la clave con la que se firman las sesiones (`jwt-secret.key`). No hay servidor del proyecto ni cuentas en la nube.
-- **Contraseñas**: se guardan solo como hash BCrypt.
-- **Conexiones salientes**, y solo estas:
-  - El servidor envía a [MyMemory](https://mymemory.translated.net/) el texto en inglés de las instrucciones de un ejercicio del catálogo la primera vez que alguien abre su ficha en español (y el correo de contacto, solo si lo configuras en `APP_TRANSLATION_EMAIL`). Nunca envía datos del usuario. Se desactiva con `APP_TRANSLATION_PROVIDER=none` o se cambia por tu propia instancia de LibreTranslate.
-  - El navegador descarga las fotos de los ejercicios de `raw.githubusercontent.com` (repositorio free-exercise-db).
-- **Sin telemetría**, analítica ni anuncios.
+## What data the app handles
 
-## Recomendaciones de uso
+- **Everything is stored on your machine**, in the `data/` folder of the directory you start the server from: the H2 database (accounts, workouts, measurements, notes) and the key used to sign sessions (`jwt-secret.key`). There is no project server and no cloud account.
+- **Passwords** are stored only as BCrypt hashes.
+- **Outgoing connections**, and only these:
+  - The server sends [MyMemory](https://mymemory.translated.net/) the English instruction text of a catalog exercise the first time someone opens it in Spanish (plus your contact email, only if you set `APP_TRANSLATION_EMAIL`). It never sends user data. Turn it off with `APP_TRANSLATION_PROVIDER=none`, or replace it with your own LibreTranslate instance.
+  - The browser downloads exercise photos from `raw.githubusercontent.com` (the free-exercise-db repository).
+- **No telemetry**, analytics or ads.
 
-- Por defecto sirve HTTP en el puerto 8080, pensado para tu equipo o tu red de casa. Para exponerla a internet, ponla detrás de HTTPS (un proxy inverso) y arranca con `APP_COOKIES_SECURE=true`.
-- Haz copias de seguridad de la carpeta `data/` o exporta la copia en JSON desde la app. No compartas `jwt-secret.key`.
-- El `.jar` de cada release lo construye GitHub Actions a partir de la etiqueta publicada; comprueba la descarga con su fichero `.sha256`.
+## Recommendations
+
+- By default it serves plain HTTP on port 8080, meant for your computer or your home network. To expose it to the internet, put it behind HTTPS (a reverse proxy) and start it with `APP_COOKIES_SECURE=true`.
+- Back up the `data/` folder, or export the JSON backup from the app. Don't share `jwt-secret.key`.
+- The `.jar` of each release is built by GitHub Actions from the published tag; verify the download with its `.sha256` file.

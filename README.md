@@ -1,45 +1,66 @@
 # MyHomeGym
 
-Aplicación de software libre (GPL-3.0) para registrar entrenamientos de fuerza en tu gimnasio en casa. Funciona entera en tu equipo: un backend Spring Boot con su propia base de datos y una interfaz web React pensada para el móvil.
+[![CI](https://github.com/Antberhol/MyHomeGym/actions/workflows/ci.yml/badge.svg)](https://github.com/Antberhol/MyHomeGym/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/Antberhol/MyHomeGym?include_prereleases&label=release)](https://github.com/Antberhol/MyHomeGym/releases)
+[![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue)](LICENSE)
+[![Java 21](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk&logoColor=white)](https://adoptium.net/)
+[![Spring Boot 3.5](https://img.shields.io/badge/Spring%20Boot-3.5-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Vite 7](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
+[![PWA](https://img.shields.io/badge/PWA-installable-5A0FC8?logo=pwa&logoColor=white)](https://web.dev/explore/progressive-web-apps)
 
-- Entrenamientos guiados por rutina o libres, con series, RPE, temporizador de descanso y calculadora de discos.
-- Rutinas, carpetas y plantillas (Full Body, Push Pull Legs, Upper Lower, 5×5).
-- Catálogo de 876 ejercicios de [free-exercise-db](https://github.com/yuhonas/free-exercise-db) con nombres traducidos a mano y fotos de cada ejercicio.
-- Récords personales, 1RM estimado, volumen semanal, medidas corporales y mapa muscular.
-- Cuentas de usuario con JWT. Copia de seguridad en JSON, entrenos en CSV y resumen en PDF.
-- En español e inglés. Instalable como app (PWA). Sin telemetría: solo se conecta fuera para las fotos del catálogo y para traducir sus instrucciones (desactivable). Detalles en [SECURITY.md](SECURITY.md).
+**English** · [Español](README.es.md)
 
-## In English
+A free, open-source (GPL-3.0) app to log strength workouts in your home gym. It runs entirely on your own computer: a Spring Boot backend with its own database and a mobile-first React web app.
 
-MyHomeGym is a free (GPL-3.0) strength-training tracker for home gyms that runs entirely on your own computer: a Spring Boot backend with its own database and a mobile-first React web app (installable PWA), in Spanish and English. **Current version: 1.0.0-beta.1 (beta).** To try it, install Java 21, download the `.jar` from *Releases*, run `java -jar myhomegym-1.0.0-beta.1.jar` and open <http://localhost:8080>. The documentation is in Spanish; [SECURITY.md](SECURITY.md) explains what data it stores and which connections it makes.
+- Guided workouts from your routines, or free sessions, with sets, RPE, rest timer and plate calculator.
+- Routines, folders and templates (Full Body, Push Pull Legs, Upper Lower, 5×5).
+- A catalog of 876 exercises from [free-exercise-db](https://github.com/yuhonas/free-exercise-db), with photos of every exercise.
+- Personal records, estimated 1RM, weekly volume, body measurements and a muscle map.
+- User accounts with JWT. JSON backup, CSV export of workouts and a PDF summary.
+- Spanish and English interface. Installable as an app (PWA). No telemetry: the only outgoing connections are the catalog photos and the translation of exercise instructions (can be turned off). Details in [SECURITY.md](SECURITY.md).
 
-## Versión actual
+## Current version
 
-**1.0.0-beta.1** (beta). La forma más rápida de probarla es descargar el `.jar` de la página de *Releases* y ejecutarlo con `java -jar` (solo necesitas Java 21). Antes de actualizar de una beta a otra, exporta una copia de seguridad en JSON. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
+**1.0.0-beta.1** (beta). The app is complete and tested, but few people have used it yet. Export a JSON backup before updating from one beta to the next. Changes in each version are listed in [CHANGELOG.md](CHANGELOG.md) (in Spanish).
 
-## Requisitos (para compilarla)
+## Quick start (no build needed)
+
+1. Install Java 21, for example [Temurin](https://adoptium.net/).
+2. Download `myhomegym-1.0.0-beta.1.jar` from the *Releases* page.
+3. In the folder where you saved it, run:
+
+   ```bash
+   java -jar myhomegym-1.0.0-beta.1.jar
+   ```
+
+4. Open <http://localhost:8080>, create your account and pick your language. Your data is saved in a `data/` folder inside the folder you ran the `.jar` from.
+
+From your phone, on the same network, open `http://<your-computer-ip>:8080` and add a shortcut to the home screen. Installing it as a full app (with offline support) requires serving it over HTTPS.
+
+## Building from source
+
+Requirements:
 
 - Java 21 (JDK)
-- Node.js 22 y npm
+- Node.js 22 and npm
 
-No hace falta instalar Maven: el proyecto incluye `mvnw`.
+You don't need to install Maven: the project includes the `mvnw` wrapper.
 
-## Puesta en marcha
-
-### Opción A: todo en un único servidor (uso diario)
+### Option A: everything in one server (daily use)
 
 ```bash
 cd frontend
 npm ci
-npm run build:backend      # compila la interfaz y la copia dentro del backend
+npm run build:backend      # builds the web app and copies it into the backend
 
 cd ../backend
-./mvnw spring-boot:run     # en Windows: mvnw.cmd spring-boot:run
+./mvnw spring-boot:run     # on Windows: mvnw.cmd spring-boot:run
 ```
 
-Abre <http://localhost:8080>, crea tu cuenta y listo. Los datos se guardan en `backend/data/`.
+Open <http://localhost:8080> and create your account. Data is stored in `backend/data/`.
 
-### Opción B: desarrollo con recarga en caliente
+### Option B: development with hot reload
 
 ```bash
 # Terminal 1
@@ -49,87 +70,93 @@ cd backend && ./mvnw spring-boot:run
 cd frontend && npm ci && npm run dev
 ```
 
-Abre <http://localhost:5173>. Vite reenvía `/api` al backend, así que no hay que tocar CORS.
+Open <http://localhost:5173>. Vite forwards `/api` to the backend, so there is no CORS setup.
 
-## Configuración
+## Configuration
 
-Todo se configura en `backend/src/main/resources/application.yml` o con variables de entorno:
+Everything is set in `backend/src/main/resources/application.yml` or with environment variables:
 
-| Variable | Valor por defecto | Para qué |
+| Variable | Default | What it does |
 | --- | --- | --- |
-| `MYHOMEGYM_DATA_DIR` | `./data` | Carpeta de la base de datos H2 y de la clave JWT |
-| `MYHOMEGYM_JWT_SECRET` | vacío | Clave HMAC en Base64 (32 bytes o más). Si está vacía se genera una al arrancar y se guarda en la carpeta de datos |
-| `APP_TRANSLATION_PROVIDER` | `mymemory` | `mymemory`, `libretranslate` o `none` |
-| `APP_TRANSLATION_EMAIL` | vacío | Correo de contacto para MyMemory: amplía su cuota diaria gratuita |
-| `APP_TRANSLATION_URL` | `http://localhost:5000` | URL de tu instancia de LibreTranslate |
-| `APP_COOKIES_SECURE` | `false` | Ponlo a `true` si sirves la app por HTTPS |
-| `SERVER_PORT` | `8080` | Puerto del servidor |
+| `MYHOMEGYM_DATA_DIR` | `./data` | Folder for the H2 database and the JWT key |
+| `MYHOMEGYM_JWT_SECRET` | empty | Base64 HMAC key (32 bytes or more). If empty, one is generated at startup and saved in the data folder |
+| `APP_TRANSLATION_PROVIDER` | `mymemory` | `mymemory`, `libretranslate` or `none` |
+| `APP_TRANSLATION_EMAIL` | empty | Contact email for MyMemory: raises its free daily quota |
+| `APP_TRANSLATION_URL` | `http://localhost:5000` | URL of your LibreTranslate instance |
+| `APP_COOKIES_SECURE` | `false` | Set it to `true` if you serve the app over HTTPS |
+| `SERVER_PORT` | `8080` | Server port |
 
-### Traducción de ejercicios
+### Exercise translations
 
-- **Nombres**: traducidos a mano, en el campo `nameEs` de cada ejercicio. El catálogo está en `backend/src/main/resources/catalog/exercises/`: un fichero por músculo principal (`chest.json`, `quadriceps.json`...) y un ejercicio por línea. Si ves un nombre mejorable, abre un pull request.
-- **Instrucciones**: se traducen automáticamente la primera vez que alguien abre la ficha y se guardan en la base de datos. Si el traductor no responde, la ficha muestra los pasos en inglés y lo indica.
-- Para no depender de un servicio externo, ejecuta [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate) en local y usa `APP_TRANSLATION_PROVIDER=libretranslate`.
+- **Names** are translated into Spanish by hand, in the `nameEs` field of each exercise. In English the app uses the original names.
+- **Instructions** are in English in the catalog. When someone opens an exercise in Spanish for the first time, they are machine-translated and cached in the database. If the translator is unavailable, the steps are shown in English with a notice.
+- To avoid any external service, run [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate) locally and set `APP_TRANSLATION_PROVIDER=libretranslate`, or turn translation off with `APP_TRANSLATION_PROVIDER=none`.
 
-## Comandos útiles
+The catalog lives in `backend/src/main/resources/catalog/exercises/`: one file per primary muscle (`chest.json`, `quadriceps.json`...) and one exercise per line.
 
-| Dónde | Comando | Qué hace |
+## Useful commands
+
+| Where | Command | What it does |
 | --- | --- | --- |
-| `backend/` | `./mvnw verify` | Compila y pasa los tests |
-| `backend/` | `./mvnw package` | Genera `target/myhomegym-backend-<versión>.jar` (ejecutable con `java -jar`) |
-| `frontend/` | `npm run dev` | Servidor de desarrollo |
+| `backend/` | `./mvnw verify` | Compiles and runs the tests |
+| `backend/` | `./mvnw package` | Builds `target/myhomegym-backend-<version>.jar` (runs with `java -jar`) |
+| `frontend/` | `npm run dev` | Development server |
 | `frontend/` | `npm run lint` | ESLint |
-| `frontend/` | `npm test` | Tests con Vitest |
-| `frontend/` | `npm run check:i18n` | Comprueba que español e inglés tienen las mismas claves |
-| `frontend/` | `npm run build` | Build de producción en `frontend/dist` |
+| `frontend/` | `npm test` | Tests with Vitest |
+| `frontend/` | `npm run check:i18n` | Checks that Spanish and English have the same keys |
+| `frontend/` | `npm run build` | Production build in `frontend/dist` |
 
-## Estructura
+## Project structure
 
 ```
-backend/    API REST Spring Boot (Java 21): auth JWT, dominio, catálogo, traducción
-frontend/   Interfaz React + Vite en JavaScript (PWA)
-docs/       Funcionalidad, arquitectura y catálogo de requisitos
+backend/    Spring Boot REST API (Java 21): JWT auth, domain, catalog, translation
+frontend/   React + Vite web app in JavaScript (PWA)
+docs/       Documentation: docs/en (English) and docs/es (Spanish, including the requirements)
 ```
 
-## Documentación
+## Documentation
 
-- [docs/FUNCIONALIDAD.md](docs/FUNCIONALIDAD.md): qué hace la app, pantalla por pantalla, y con qué reglas.
-- [docs/REQUISITOS_FUNCIONALES_Y_ACEPTACION.md](docs/REQUISITOS_FUNCIONALES_Y_ACEPTACION.md): especificación de requisitos (ERS): objetivos, casos de uso, requisitos de información, funcionales y no funcionales, reglas de negocio, pruebas de aceptación y trazabilidad a los tests. La misma ERS en un solo documento de Word: [docs/MyHomeGym-ERS.docx](docs/MyHomeGym-ERS.docx).
-- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): cómo está construida.
-- [docs/DIAGRAMAS.md](docs/DIAGRAMAS.md): todos los diagramas (casos de uso, datos, arquitectura) en imagen.
-- [docs/ANDROID.md](docs/ANDROID.md): guía para llevarla a Android.
-- [docs/RELEASE.md](docs/RELEASE.md): cómo publicar una versión.
-- [CHANGELOG.md](CHANGELOG.md): historial de versiones.
-- [AGENTS.md](AGENTS.md): reglas para programar el proyecto con asistentes de IA.
-- [SECURITY.md](SECURITY.md): datos, conexiones y cómo avisar de un fallo de seguridad.
+English documentation is in `docs/en/` and Spanish documentation in `docs/es/`; [docs/README.md](docs/README.md) indexes both.
 
-## Seguridad
+In English:
 
-- Contraseñas con BCrypt; bloqueo de 15 minutos tras 5 intentos fallidos.
-- JWT de acceso de 15 minutos guardado solo en memoria; token de refresco rotatorio en cookie `HttpOnly` y `SameSite=Strict`.
-- Cada usuario solo puede leer y modificar sus propios datos (comprobado en los tests de integración).
-- No hay secretos en el repositorio. La base de datos y la clave JWT están en `.gitignore`.
+- [docs/en/USER_GUIDE.md](docs/en/USER_GUIDE.md): what the app does, screen by screen, and the rules behind it.
+- [docs/en/ARCHITECTURE.md](docs/en/ARCHITECTURE.md): how it is built.
+- [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md) (rules for AI coding agents) and [SECURITY.md](SECURITY.md).
 
-Qué datos guarda la app, qué conexiones hace y cómo avisar de un problema de seguridad sin publicarlo: [SECURITY.md](SECURITY.md).
+Only in Spanish:
 
-## Contribuir
+- [docs/es/REQUISITOS_FUNCIONALES_Y_ACEPTACION.md](docs/es/REQUISITOS_FUNCIONALES_Y_ACEPTACION.md): the software requirements specification (objectives, use cases, functional and non-functional requirements, business rules, acceptance tests and traceability to the tests). Also as a single Word document: [docs/es/MyHomeGym-ERS.docx](docs/es/MyHomeGym-ERS.docx).
+- [docs/es/DIAGRAMAS.md](docs/es/DIAGRAMAS.md): all the diagrams (use cases, data model, architecture) as images.
+- [docs/es/ANDROID.md](docs/es/ANDROID.md): plan for an Android version, and [docs/es/RELEASE.md](docs/es/RELEASE.md): how to publish a release.
 
-Lee [CONTRIBUTING.md](CONTRIBUTING.md). Si programas con un asistente de IA, [AGENTS.md](AGENTS.md) es obligatorio para él y para ti. Todo pull request pasa por la CI (`.github/workflows/ci.yml`), que compila y prueba backend y frontend.
+## Security
 
-## Licencia
+- Passwords hashed with BCrypt; 15-minute lockout after 5 failed attempts.
+- 15-minute access JWT kept only in memory; rotating refresh token in an `HttpOnly`, `SameSite=Strict` cookie.
+- Each user can only read and change their own data (checked by the integration tests).
+- No secrets in the repository. The database and the JWT key are in `.gitignore`.
 
-MyHomeGym es software libre bajo la **GNU General Public License v3.0 o posterior** (`GPL-3.0-or-later`). Copyright © 2026 Antonio M. Bernaza Holgado.
+What data the app stores, which connections it makes and how to report a security issue privately: [SECURITY.md](SECURITY.md).
 
-En la práctica:
+## Contributing
 
-- Puedes usarla, estudiarla, modificarla y compartirla, también con cambios.
-- Si distribuyes la app o una versión modificada, tienes que mantener los avisos de autoría y publicar tu código bajo la misma licencia. No se puede convertir en un producto cerrado.
-- Se ofrece sin garantía.
-- El nombre "MyHomeGym" y su icono identifican al proyecto original: una versión modificada debe usar otro nombre y otro icono.
+Read [CONTRIBUTING.md](CONTRIBUTING.md). If you code with an AI assistant, [AGENTS.md](AGENTS.md) is mandatory for both you and the agent. Every pull request goes through CI (`.github/workflows/ci.yml`), which builds and tests the backend and the frontend.
 
-El texto completo está en [LICENSE](LICENSE). Los créditos de terceros, en [NOTICE](NOTICE):
+## License
 
-- Datos de ejercicios e imágenes: [free-exercise-db](https://github.com/yuhonas/free-exercise-db), dominio público (The Unlicense).
-- Figura anatómica: js-rich-body-highlighter, licencia MIT.
-- Tipografías Barlow y Big Shoulders Display: SIL Open Font License 1.1.
-- Traducciones automáticas: [MyMemory](https://mymemory.translated.net/) o tu instancia de LibreTranslate.
+MyHomeGym is free software under the **GNU General Public License v3.0 or later** (`GPL-3.0-or-later`). Copyright © 2026 Antonio M. Bernaza Holgado.
+
+In short:
+
+- You can use, study, modify and share it, including modified versions.
+- If you distribute the app or a modified version, you must keep the copyright notices and publish your code under the same license. It cannot become a closed product.
+- It comes with no warranty.
+- The name "MyHomeGym" and its icon identify the original project: a modified version must use a different name and icon.
+
+The full text is in [LICENSE](LICENSE). Third-party credits are in [NOTICE](NOTICE):
+
+- Exercise data and images: [free-exercise-db](https://github.com/yuhonas/free-exercise-db), public domain (The Unlicense).
+- Anatomical figure: js-rich-body-highlighter, MIT license.
+- Barlow and Big Shoulders Display fonts: SIL Open Font License 1.1.
+- Machine translations: [MyMemory](https://mymemory.translated.net/) or your own LibreTranslate instance.

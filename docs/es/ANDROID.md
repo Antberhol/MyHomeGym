@@ -62,7 +62,7 @@ npx cap open android
 | CORS | Orígenes de desarrollo | Añadir `https://localhost` a los orígenes permitidos en `application.yml`. |
 | HTTP | Funciona en local | Android bloquea HTTP sin cifrar: el servidor tiene que ir por **HTTPS**. |
 
-Cada cambio del backend lleva su test (regla 5 de [AGENTS.md](../AGENTS.md)): login sin cookie, refresco con el token en el cuerpo y CORS para `https://localhost`.
+Cada cambio del backend lleva su test (regla 5 de [AGENTS.md](../../AGENTS.es.md)): login sin cookie, refresco con el token en el cuerpo y CORS para `https://localhost`.
 
 ### 4.2 Datos en el móvil (solo camino B)
 

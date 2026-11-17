@@ -1,5 +1,7 @@
 # Funcionalidad de MyHomeGym
 
+[English](../en/USER_GUIDE.md) · **Español**
+
 Qué hace la aplicación, pantalla por pantalla, y con qué reglas. Está pensado para quien vaya a usarla, probarla o cambiarla. Los requisitos formales y sus pruebas de aceptación están en [REQUISITOS_FUNCIONALES_Y_ACEPTACION.md](REQUISITOS_FUNCIONALES_Y_ACEPTACION.md). Cómo está construida, en [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## Qué es

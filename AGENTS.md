@@ -1,90 +1,91 @@
-# Guía para programar MyHomeGym con IA
+# Guide for coding MyHomeGym with AI
 
-> *English: this is the mandatory guide for any AI coding agent (Claude Code, Codex, Copilot, Cursor, Gemini…) working on MyHomeGym, and for the person using it. Agents: follow every rule below; the project is documented in Spanish.*
+**English** · [Español](AGENTS.es.md)
 
-Esta guía es obligatoria para cualquier asistente de IA que escriba o cambie código de MyHomeGym, y para la persona que lo usa. Si tu herramienta no lee `AGENTS.md` por su cuenta, dásela al empezar (ver el último apartado).
+This guide is mandatory for any AI assistant (Claude Code, Codex, Copilot, Cursor, Gemini…) that writes or changes MyHomeGym code, and for the person using it. If your tool doesn't read `AGENTS.md` on its own, give it this file when you start (see the last section).
 
-Proyecto: backend Spring Boot 3.5 con Java 21 en `backend/`, frontend React + Vite en JavaScript en `frontend/`. Todo funciona en local: base de datos H2 en fichero y sin servicios propios en la nube.
+Project: Spring Boot 3.5 backend with Java 21 in `backend/`, React + Vite frontend in JavaScript in `frontend/`. Everything runs locally: an H2 database in a file and no cloud services of its own. Code identifiers and the requirements specification are in Spanish.
 
-## 1. Lo que tiene que hacer la persona
+## 1. What the person must do
 
-La IA es una herramienta; la responsable del cambio es la persona que abre el pull request.
+AI is a tool; the person who opens the pull request is responsible for the change.
 
-1. **Revisa y entiende cada línea** antes de proponerla. Si no sabes explicar un cambio, no lo envíes.
-2. **Dilo en el pull request**: indica que has usado IA y en qué partes. No es un problema; ocultarlo, sí.
-3. **No le des a la IA datos que no deba ver**: ni contraseñas, ni tokens, ni la carpeta `backend/data/`, ni copias de seguridad con datos reales.
-4. **Licencia**: todo lo que se añade se publica bajo GPL-3.0-or-later. No pegues ni pidas código copiado de proyectos con licencia incompatible o desconocida. Una dependencia nueva necesita licencia compatible y su línea en `NOTICE`.
-5. Un pull request generado con IA que no compila, no pasa los tests o no sigue esta guía se cierra sin revisarlo.
+1. **Review and understand every line** before proposing it. If you can't explain a change, don't send it.
+2. **Say so in the pull request**: state that you used AI and for which parts. Using it is fine; hiding it is not.
+3. **Don't give the AI data it shouldn't see**: no passwords, tokens, the `backend/data/` folder or backups with real data.
+4. **License**: everything added is published under GPL-3.0-or-later. Don't paste or ask for code copied from projects with an incompatible or unknown license. A new dependency needs a compatible license and its line in `NOTICE`.
+5. An AI-generated pull request that doesn't build, doesn't pass the tests or doesn't follow this guide is closed without review.
 
-## 2. Reglas obligatorias para el agente
+## 2. Mandatory rules for the agent
 
-### Antes de tocar nada
+### Before touching anything
 
-- Lee `README.md`, `docs/ARCHITECTURE.md` y el módulo de requisitos afectado en `docs/requisitos/`.
-- Si la petición contradice esta guía o la especificación (ERS), dilo y pregunta antes de programar.
+- Read `README.md`, `docs/en/ARCHITECTURE.md` and the affected requirements module in `docs/es/requisitos/`.
+- If the request contradicts this guide or the specification, say so and ask before coding.
 
-### Verificación
+### Verification
 
-Nada está terminado hasta que pasan, sin errores ni avisos nuevos:
+Nothing is done until these pass, with no errors or new warnings:
 
 ```bash
 cd backend && ./mvnw verify
 cd frontend && npm run lint && npm test && npm run check:i18n && npm run build
 ```
 
-Nunca desactives, borres ni debilites un test, una regla de lint o una comprobación para que algo pase.
+Never disable, delete or weaken a test, a lint rule or a check to make something pass.
 
-### Código
+### Code
 
-1. **Frontend en JavaScript**, sin TypeScript. Las pantallas acceden a los datos solo a través de repositorios → `src/lib/db.js` → `src/lib/api.js`. Ninguna pantalla llama a `fetch`.
-2. **Textos**: todo texto visible va en `frontend/src/locales/es.json` y `en.json`, con las mismas claves. La app trata al usuario de tú.
-3. **Estilos** solo con los tokens de `frontend/tailwind.config.js`. El violeta `gym-accent` es solo para acciones; `gym-danger`, para errores y borrar; los colores `plate-*`, solo para datos. La paleta vive en `frontend/src/styles/theme.css`. Objetivos táctiles de 44 px como mínimo.
-4. **Backend**: los recursos de usuario extienden `OwnedEntity` y `OwnedCrudController`. El propietario sale siempre del JWT, nunca del cuerpo de la petición. Los errores que la app deba traducir usan `ApiException` con un código estable.
-5. **Tests**: cada endpoint o regla nueva lleva su test (MockMvc en el backend, Vitest en el frontend). Un fallo corregido lleva un test que lo habría detectado.
-6. **Tamaño**: un fichero de más de unas 300 líneas se divide.
-7. **Catálogo**: nada de datos de catálogo en ficheros `.js`. Vive en `backend/src/main/resources/catalog/exercises/`, un fichero por músculo principal y un ejercicio por línea.
-8. **Secretos y datos**: nada de secretos en el repositorio. La carpeta `backend/data/` nunca se sube. Los tests usan datos inventados.
+1. **Frontend in JavaScript**, no TypeScript. Screens access data only through repositories → `src/lib/db.js` → `src/lib/api.js`. No screen calls `fetch`.
+2. **Texts**: every visible text goes in `frontend/src/locales/es.json` and `en.json`, with the same keys. In Spanish, the app addresses the user as "tú".
+3. **Styles** only with the tokens in `frontend/tailwind.config.js`. Violet `gym-accent` is only for actions; `gym-danger`, for errors and deleting; `plate-*` colors, only for data. The palette lives in `frontend/src/styles/theme.css`. Touch targets of at least 44 px.
+4. **Backend**: user resources extend `OwnedEntity` and `OwnedCrudController`. The owner always comes from the JWT, never from the request body. Errors the app needs to translate use `ApiException` with a stable code.
+5. **Tests**: every new endpoint or rule has its test (MockMvc in the backend, Vitest in the frontend). A fixed bug comes with a test that would have caught it.
+6. **Size**: a file longer than about 300 lines gets split.
+7. **Catalog**: no catalog data in `.js` files. It lives in `backend/src/main/resources/catalog/exercises/`, one file per primary muscle and one exercise per line.
+8. **Secrets and data**: no secrets in the repository. The `backend/data/` folder is never committed. Tests use made-up data.
 
-### Seguridad y privacidad
+### Security and privacy
 
-- No debilites la autenticación: BCrypt, JWT en memoria, cookie de refresco `HttpOnly`, bloqueo por intentos ni la comprobación de propietario.
-- No añadas telemetría, analítica, anuncios ni conexiones a servicios externos nuevos. Los datos del usuario no salen de su equipo.
-- Todo lo que llega al servidor se valida (Bean Validation) y lo que se guarda en varios pasos va en una transacción.
+- Don't weaken authentication: BCrypt, in-memory JWT, `HttpOnly` refresh cookie, lockout after failed attempts, or the owner check.
+- Don't add telemetry, analytics, ads or connections to new external services. User data never leaves their machine.
+- Everything that reaches the server is validated (Bean Validation), and anything saved in several steps goes in one transaction.
 
-### Documentación
+### Documentation
 
-Un cambio de comportamiento no está terminado sin su documentación:
+A behavior change isn't done without its documentation:
 
-- Requisito o regla nueva: su `FR`, su `RN` si tiene cálculo o condición, y al menos una prueba de aceptación `AC` en el módulo de `docs/requisitos/`. Si está automatizada, cita el test y añádelo a `docs/requisitos/13-trazabilidad.md`. Los identificadores nunca se reutilizan.
-- Si cambia lo que ve el usuario: `docs/FUNCIONALIDAD.md`.
-- Si cambia la API o la estructura: `docs/ARCHITECTURE.md`.
-- Siempre: una línea en `CHANGELOG.md`, en *Sin publicar*.
+- New requirement or rule: its `FR`, its `RN` if it involves a calculation or condition, and at least one acceptance test `AC` in its module of `docs/es/requisitos/`. If the test is automated, cite it and add it to `docs/es/requisitos/13-trazabilidad.md`. Identifiers are never reused.
+- If what the user sees changes: `docs/en/USER_GUIDE.md` and `docs/es/FUNCIONALIDAD.md`.
+- If the API or the structure changes: `docs/en/ARCHITECTURE.md` and `docs/es/ARCHITECTURE.md`.
+- README, CONTRIBUTING, SECURITY, AGENTS, the user guide and the architecture exist in English and Spanish (`*.es.md`, `docs/en/` and `docs/es/`): always change both languages. The requirements and the diagrams are only in Spanish.
+- Always: one line in `CHANGELOG.md`, under *Sin publicar* (unreleased).
 
-### Lo que el agente no hace por su cuenta
+### What the agent doesn't do on its own
 
-Solo con una petición explícita de la persona:
+Only when the person explicitly asks:
 
-- Cambiar `LICENSE`, `NOTICE` (salvo añadir el crédito de una dependencia nueva) o los flujos de `.github/workflows/`.
-- Cambiar el número de versión, crear etiquetas o publicar releases.
-- Hacer `git push`, reescribir el historial o borrar ramas.
-- Añadir dependencias. Si hacen falta, propónlas con su licencia y el motivo.
+- Change `LICENSE`, `NOTICE` (except adding the credit of a new dependency) or the workflows in `.github/workflows/`.
+- Change the version number, create tags or publish releases.
+- `git push`, rewrite history or delete branches.
+- Add dependencies. If one is needed, propose it with its license and the reason.
 
-## 3. Antes de entregar
+## 3. Before handing over
 
-- [ ] Las órdenes de verificación pasan.
-- [ ] Hay tests para lo nuevo y para el fallo corregido.
-- [ ] Los textos nuevos están en español y en inglés.
-- [ ] La documentación y `CHANGELOG.md` están al día.
-- [ ] No hay secretos, datos reales ni ficheros de `backend/data/`.
-- [ ] El resumen del cambio dice qué se ha hecho, cómo se ha comprobado y qué queda pendiente.
+- [ ] The verification commands pass.
+- [ ] There are tests for what's new and for the fixed bug.
+- [ ] New texts are in Spanish and English.
+- [ ] The documentation and `CHANGELOG.md` are up to date, in both languages where they exist.
+- [ ] No secrets, real data or files from `backend/data/`.
+- [ ] The summary of the change says what was done, how it was checked and what is pending.
 
-## 4. Configurar tu herramienta
+## 4. Setting up your tool
 
-Las reglas comunes viven solo en este fichero. Los ficheros de configuración propios de cada herramienta son personales y están en `.gitignore`.
+The shared rules live only in this file. Each tool's own configuration files are personal and are in `.gitignore`.
 
-| Herramienta | Cómo le das esta guía |
+| Tool | How to give it this guide |
 | --- | --- |
-| Codex, GitHub Copilot, Cursor, Zed y otras compatibles | Leen `AGENTS.md` solas. |
-| Claude Code | Crea un `CLAUDE.md` local con la línea `@AGENTS.md`. |
-| Gemini CLI | Crea un `GEMINI.md` local con la línea `@AGENTS.md`, o configura `AGENTS.md` como fichero de contexto. |
-| Cualquier otra | Pega el contenido de este fichero al principio de la conversación. |
+| Codex, GitHub Copilot, Cursor, Zed and other compatible tools | They read `AGENTS.md` on their own. |
+| Claude Code | Create a local `CLAUDE.md` with the line `@AGENTS.md`. |
+| Gemini CLI | Create a local `GEMINI.md` with the line `@AGENTS.md`, or set `AGENTS.md` as its context file. |
+| Any other | Paste this file at the start of the conversation. |

@@ -1,17 +1,20 @@
 # Historial de versiones
 
-Todos los cambios relevantes de MyHomeGym. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y las versiones, [Versionado Semántico](https://semver.org/lang/es/). Cómo se publica una versión: [docs/RELEASE.md](docs/RELEASE.md).
+Todos los cambios relevantes de MyHomeGym. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y las versiones, [Versionado Semántico](https://semver.org/lang/es/). Cómo se publica una versión: [docs/es/RELEASE.md](docs/es/RELEASE.md).
 
 ## [Sin publicar]
 
 ### Cambiado
 
 - Las reglas para asistentes de IA pasan de `CLAUDE.md` a `AGENTS.md`, válido para cualquier herramienta, con lo que debe hacer la persona y lo que debe hacer el agente.
+- La documentación se divide en `docs/es/` (español) y `docs/en/` (inglés), con un índice en `docs/README.md`. El README principal pasa a estar en inglés; el español está en `README.es.md`.
+- Notas de la versión 1.0.0-beta.1 en inglés y en español.
 
 ### Añadido
 
 - `SECURITY.md`: qué datos guarda la app, qué conexiones hace y cómo avisar de un fallo de seguridad en privado.
-- Resumen en inglés en el README.
+- Documentación en inglés y en español: README, CONTRIBUTING, SECURITY, AGENTS, guía de uso (`docs/en/USER_GUIDE.md`) y arquitectura. Los requisitos y los diagramas siguen solo en español.
+- Insignias en el README (CI, versión, licencia y tecnologías).
 
 ## [1.0.0-beta.1] - 2026-11-17
 
@@ -26,7 +29,7 @@ Primera versión pública, en fase beta.
 - Cuentas de usuario con JWT y token de refresco rotatorio; cada usuario solo ve sus datos.
 - Copia de seguridad en JSON (restaurar o fusionar), entrenos en CSV y resumen en PDF. Todo en español e inglés.
 - PWA instalable, con la interfaz y las tipografías incluidas (sin Google Fonts).
-- Especificación de requisitos (ERS 2.2) con trazabilidad a los tests, guía para Android y todos los diagramas en imagen (`docs/DIAGRAMAS.md`).
+- Especificación de requisitos (ERS 2.2) con trazabilidad a los tests, guía para Android y todos los diagramas en imagen (`docs/es/DIAGRAMAS.md`).
 
 ### Corregido antes de publicar
 
@@ -38,7 +41,7 @@ Primera versión pública, en fase beta.
 
 ### Limitaciones conocidas
 
-- Es una beta: haz una copia de seguridad en JSON (Configuración → Datos) antes de actualizar a otra versión.
+- Es una beta: haz una copia de seguridad en JSON (Configuración → Tus datos) antes de actualizar a otra versión.
 - Pensada para uso en local o en una red de confianza; para exponerla a internet, sírvela por HTTPS y activa `APP_COOKIES_SECURE=true`.
 - La base de datos H2 admite un solo proceso: no arranques dos servidores con la misma carpeta de datos.
 

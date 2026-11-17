@@ -31,7 +31,7 @@ Mientras la app esté en beta, cada versión nueva es `1.0.0-beta.2`, `1.0.0-bet
 
 1. **Número**: cámbialo en `frontend/package.json` (y ejecuta `npm install --package-lock-only` en `frontend/`) y en `backend/pom.xml`.
 2. **Historial**: en `CHANGELOG.md`, pasa lo de *Sin publicar* a una sección nueva con el número y la fecha.
-3. **Notas**: crea `docs/release-notes/v<número>.md`. Es lo que verá la gente en la página de la release: qué ha cambiado, cómo instalarla y qué limitaciones tiene. Copia la de la versión anterior como plantilla.
+3. **Notas**: crea `docs/release-notes/v<número>.md`. Escríbela en inglés y en español, como la de la 1.0.0-beta.1. Es lo que verá la gente en la página de la release: qué ha cambiado, cómo instalarla y qué limitaciones tiene. Copia la de la versión anterior como plantilla.
 4. **Comprueba** que todo pasa en local (las mismas órdenes que la CI):
 
    ```bash
