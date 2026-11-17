@@ -3,6 +3,7 @@
 Todos los cambios relevantes de MyHomeGym. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y las versiones, [Versionado Semántico](https://semver.org/lang/es/). Cómo se publica una versión: [docs/es/RELEASE.md](docs/es/RELEASE.md).
 
 ## [Sin publicar]
+- Translate requirements module 00-introduccion.md to English (docs/en/requirements/00-introduccion.md).
 
 ### Cambiado
 
