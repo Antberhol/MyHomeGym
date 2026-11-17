@@ -1,0 +1,54 @@
+name: Translation fix
+description: A wrong or awkward text in Spanish or English. / Un texto mal traducido.
+title: "[Translation]: "
+labels: ["translation", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For a single text, an issue is enough. To fix many exercise names, open a pull request instead (see issue #1).
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where is the text?
+      options:
+        - Exercise name
+        - Muscle, equipment or level name
+        - Exercise instructions (machine-translated)
+        - App interface (buttons, menus, messages)
+        - Documentation
+    validations:
+      required: true
+  - type: dropdown
+    id: lang
+    attributes:
+      label: Language
+      options:
+        - Español
+        - English
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Screen, exercise or file
+      placeholder: Catalog → Barbell Bench Press - Medium Grip
+    validations:
+      required: true
+  - type: input
+    id: current
+    attributes:
+      label: Current text
+    validations:
+      required: true
+  - type: input
+    id: proposed
+    attributes:
+      label: Proposed text
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why (optional)
+      description: For example, the word people actually use in a gym.

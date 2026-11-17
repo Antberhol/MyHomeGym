@@ -15,6 +15,7 @@ Todos los cambios relevantes de MyHomeGym. El formato sigue [Keep a Changelog](h
 - `SECURITY.md`: qué datos guarda la app, qué conexiones hace y cómo avisar de un fallo de seguridad en privado.
 - Documentación en inglés y en español: README, CONTRIBUTING, SECURITY, AGENTS, guía de uso (`docs/en/USER_GUIDE.md`) y arquitectura. Los requisitos y los diagramas siguen solo en español.
 - Insignias en el README (CI, versión, licencia y tecnologías).
+- Plantillas de GitHub para issues (fallo, mejora y traducción) y para pull requests, con la lista de comprobación de `AGENTS.md`.
 
 ## [1.0.0-beta.1] - 2026-11-17
 

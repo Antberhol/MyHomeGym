@@ -1,0 +1,76 @@
+name: Bug report
+description: Something doesn't work as it should. / Algo no funciona como debería.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting it. / Gracias por avisar. You can write in English or Spanish.
+
+        **Security problem?** Don't open a public issue: follow [SECURITY.md](https://github.com/Antberhol/MyHomeGym/blob/main/SECURITY.md).
+        **Never paste real personal data** (backups, the `data/` folder, tokens or passwords).
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected to happen instead.
+      placeholder: When I finish a workout with a drop set, the summary shows 0 kg of volume. I expected...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to Train and start a free workout
+        2. Add Bench Press and mark a drop set as done
+        3. Press Finish
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The name of the `.jar` you downloaded, or the release or commit you built from.
+      placeholder: 1.0.0-beta.1
+    validations:
+      required: true
+  - type: dropdown
+    id: how-run
+    attributes:
+      label: How do you run it?
+      options:
+        - Downloaded .jar (java -jar)
+        - Built from source, one server (npm run build:backend + mvnw)
+        - Development mode (npm run dev)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: Android 15, Chrome 141, installed as an app (PWA)
+  - type: dropdown
+    id: language
+    attributes:
+      label: App language
+      options:
+        - English
+        - Español
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Browser console errors or server log lines. Remove anything personal first.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before sending
+      options:
+        - label: I searched the existing issues and this isn't one of them.
+          required: true
+        - label: This report contains no real personal data, tokens or passwords.
+          required: true

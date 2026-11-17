@@ -1,0 +1,48 @@
+name: Feature request
+description: An idea to improve the app. / Una idea para mejorar la app.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You can write in English or Spanish. MyHomeGym runs on the user's own computer, with no cloud and no telemetry: ideas that need an external service or collect data are unlikely to be accepted.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+      description: What you want to do in your training and can't do today.
+      placeholder: My gym only has 20 kg and 10 kg plates, and the plate calculator suggests plates I don't own.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+      description: How it would work, from the user's point of view.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - Train (workouts, sets, rest timer)
+        - Routines and templates
+        - Catalog and exercises
+        - Progress, records and muscle map
+        - Settings, backups and export
+        - Account and security
+        - Installation, Docker, PWA or Android
+        - Documentation
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contributing
+      options:
+        - label: I'd like to implement it myself (read CONTRIBUTING.md first and wait for an OK in this issue before coding).

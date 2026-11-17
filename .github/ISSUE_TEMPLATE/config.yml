@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability / Fallo de seguridad
+    url: https://github.com/Antberhol/MyHomeGym/blob/main/SECURITY.md
+    about: Don't open a public issue. Report it privately as explained in SECURITY.md.
+  - name: How to use the app / Cómo se usa
+    url: https://github.com/Antberhol/MyHomeGym/blob/main/docs/README.md
+    about: User guide, architecture and requirements, in English and Spanish.
+  - name: How to contribute / Cómo contribuir
+    url: https://github.com/Antberhol/MyHomeGym/blob/main/CONTRIBUTING.md
+    about: Rules for pull requests, and AGENTS.md if you code with an AI assistant.
