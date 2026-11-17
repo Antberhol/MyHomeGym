@@ -11,6 +11,7 @@ Todos los cambios relevantes de MyHomeGym. El formato sigue [Keep a Changelog](h
 - Notas de la versión 1.0.0-beta.1 en inglés y en español.
 
 ### Añadido
+- Tests unitarios para `units.js` y `text.js` (`frontend/tests/unit/units-and-text.test.js`): conversiones, round trips y normalización de nombres.
 
 - `SECURITY.md`: qué datos guarda la app, qué conexiones hace y cómo avisar de un fallo de seguridad en privado.
 - Documentación en inglés y en español: README, CONTRIBUTING, SECURITY, AGENTS, guía de uso (`docs/en/USER_GUIDE.md`) y arquitectura. Los requisitos y los diagramas siguen solo en español.
