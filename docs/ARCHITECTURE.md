@@ -157,7 +157,7 @@ Si el traductor falla, se devuelve el original y no se guarda nada, de modo que 
 
 ### Integración continua y versiones
 
-- `.github/workflows/ci.yml` pasa en cada push y pull request las mismas comprobaciones que exige `CLAUDE.md`.
+- `.github/workflows/ci.yml` pasa en cada push y pull request las mismas comprobaciones que exige [AGENTS.md](../AGENTS.md).
 - `.github/workflows/release.yml` se lanza al subir una etiqueta `v*`: comprueba que coincide con la versión de `package.json` y `pom.xml`, repite las comprobaciones, construye el `.jar` con la interfaz dentro y publica la release (como *pre-release* si la versión lleva guion, por ejemplo `1.0.0-beta.1`). El procedimiento está en [RELEASE.md](RELEASE.md).
 
 ## 6. Qué revisar cuando crezca

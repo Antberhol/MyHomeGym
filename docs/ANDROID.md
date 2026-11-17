@@ -62,7 +62,7 @@ npx cap open android
 | CORS | Orígenes de desarrollo | Añadir `https://localhost` a los orígenes permitidos en `application.yml`. |
 | HTTP | Funciona en local | Android bloquea HTTP sin cifrar: el servidor tiene que ir por **HTTPS**. |
 
-Cada cambio del backend lleva su test (regla 6 de `CLAUDE.md`): login sin cookie, refresco con el token en el cuerpo y CORS para `https://localhost`.
+Cada cambio del backend lleva su test (regla 5 de [AGENTS.md](../AGENTS.md)): login sin cookie, refresco con el token en el cuerpo y CORS para `https://localhost`.
 
 ### 4.2 Datos en el móvil (solo camino B)
 
@@ -152,7 +152,7 @@ Sí, sobre todo con el camino B. Lo que te va a tocar cada año:
 Lo que ya juega a tu favor:
 
 - Hay tests y CI: los cambios de versión se detectan pronto.
-- `CLAUDE.md` deja las reglas claras para cualquier asistente que te ayude.
+- `AGENTS.md` deja las reglas claras para cualquier asistente de IA que te ayude.
 - La capa de datos está aislada en `db.js`.
 
 Lo que ya se arregló en la versión 2.1 pensando en esto:

@@ -44,6 +44,10 @@ La CI ejecuta exactamente lo mismo y no se fusiona nada en rojo.
 - Si la prueba está automatizada, cita el test y añádelo a la matriz de `docs/requisitos/13-trazabilidad.md`.
 - Si cambia lo que ve el usuario, actualiza también `docs/FUNCIONALIDAD.md`.
 
+## Si usas un asistente de IA
+
+Puedes usar Claude Code, Codex, Copilot o el que prefieras, siempre que sigas [AGENTS.md](AGENTS.md): el agente cumple sus reglas, tú revisas y entiendes cada línea, y en el pull request indicas que has usado IA y en qué partes.
+
 ## Licencia de las contribuciones
 
 MyHomeGym se distribuye bajo GPL-3.0-or-later. Al enviar un pull request aceptas que tu contribución se publique bajo esa misma licencia y declaras que el código es tuyo o que tienes derecho a aportarlo. Las dependencias nuevas deben tener una licencia compatible (MIT, BSD, Apache-2.0, MPL-2.0, OFL o similar); si añades una, apúntala en `NOTICE`.

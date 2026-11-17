@@ -20,6 +20,12 @@ jwt-secret.key
 # Logs
 *.log
 
+# Configuración local de asistentes de IA: las reglas comunes están en AGENTS.md
+CLAUDE.md
+CLAUDE.local.md
+GEMINI.md
+.claude/
+
 # Editores
 .vscode/*
 !.vscode/extensions.json

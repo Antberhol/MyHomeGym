@@ -71,7 +71,7 @@ Quien entrena fuerza en casa suele apuntar sus series en una libreta, en notas d
 | --- | --- | --- |
 | Usuario que entrena en casa | Registrar rápido, progresar, ver su evolución | Fuente principal de requisitos funcionales y de usabilidad |
 | Autor y mantenedor | Proyecto mantenible por una sola persona, valioso como portfolio | Decide el alcance, las restricciones y las prioridades |
-| Contribuidor externo (si el proyecto se publica) | Entender el código y las reglas para proponer cambios | Lee esta ERS, `CLAUDE.md` y `CONTRIBUTING.md` |
+| Contribuidor externo (si el proyecto se publica) | Entender el código y las reglas para proponer cambios | Lee esta ERS, `CONTRIBUTING.md` y, si usa IA, `AGENTS.md` |
 | Evaluador académico o técnico | Ver un proceso de ingeniería completo | Revisa la ERS y la trazabilidad con los tests |
 
 ## 0.7 Objetivos del sistema

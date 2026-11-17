@@ -4,6 +4,15 @@ Todos los cambios relevantes de MyHomeGym. El formato sigue [Keep a Changelog](h
 
 ## [Sin publicar]
 
+### Cambiado
+
+- Las reglas para asistentes de IA pasan de `CLAUDE.md` a `AGENTS.md`, válido para cualquier herramienta, con lo que debe hacer la persona y lo que debe hacer el agente.
+
+### Añadido
+
+- `SECURITY.md`: qué datos guarda la app, qué conexiones hace y cómo avisar de un fallo de seguridad en privado.
+- Resumen en inglés en el README.
+
 ## [1.0.0-beta.1] - 2026-11-17
 
 Primera versión pública, en fase beta.

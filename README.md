@@ -7,7 +7,11 @@ Aplicación de software libre (GPL-3.0) para registrar entrenamientos de fuerza 
 - Catálogo de 876 ejercicios de [free-exercise-db](https://github.com/yuhonas/free-exercise-db) con nombres traducidos a mano y fotos de cada ejercicio.
 - Récords personales, 1RM estimado, volumen semanal, medidas corporales y mapa muscular.
 - Cuentas de usuario con JWT. Copia de seguridad en JSON, entrenos en CSV y resumen en PDF.
-- En español e inglés. Instalable como app (PWA). No carga nada de terceros salvo las fotos del catálogo.
+- En español e inglés. Instalable como app (PWA). Sin telemetría: solo se conecta fuera para las fotos del catálogo y para traducir sus instrucciones (desactivable). Detalles en [SECURITY.md](SECURITY.md).
+
+## In English
+
+MyHomeGym is a free (GPL-3.0) strength-training tracker for home gyms that runs entirely on your own computer: a Spring Boot backend with its own database and a mobile-first React web app (installable PWA), in Spanish and English. **Current version: 1.0.0-beta.1 (beta).** To try it, install Java 21, download the `.jar` from *Releases*, run `java -jar myhomegym-1.0.0-beta.1.jar` and open <http://localhost:8080>. The documentation is in Spanish; [SECURITY.md](SECURITY.md) explains what data it stores and which connections it makes.
 
 ## Versión actual
 
@@ -96,6 +100,8 @@ docs/       Funcionalidad, arquitectura y catálogo de requisitos
 - [docs/ANDROID.md](docs/ANDROID.md): guía para llevarla a Android.
 - [docs/RELEASE.md](docs/RELEASE.md): cómo publicar una versión.
 - [CHANGELOG.md](CHANGELOG.md): historial de versiones.
+- [AGENTS.md](AGENTS.md): reglas para programar el proyecto con asistentes de IA.
+- [SECURITY.md](SECURITY.md): datos, conexiones y cómo avisar de un fallo de seguridad.
 
 ## Seguridad
 
@@ -104,11 +110,11 @@ docs/       Funcionalidad, arquitectura y catálogo de requisitos
 - Cada usuario solo puede leer y modificar sus propios datos (comprobado en los tests de integración).
 - No hay secretos en el repositorio. La base de datos y la clave JWT están en `.gitignore`.
 
-Si encuentras un problema de seguridad, abre una issue sin detalles explotables y lo coordinamos.
+Qué datos guarda la app, qué conexiones hace y cómo avisar de un problema de seguridad sin publicarlo: [SECURITY.md](SECURITY.md).
 
 ## Contribuir
 
-Lee [CONTRIBUTING.md](CONTRIBUTING.md). Todo pull request pasa por la CI (`.github/workflows/ci.yml`), que compila y prueba backend y frontend.
+Lee [CONTRIBUTING.md](CONTRIBUTING.md). Si programas con un asistente de IA, [AGENTS.md](AGENTS.md) es obligatorio para él y para ti. Todo pull request pasa por la CI (`.github/workflows/ci.yml`), que compila y prueba backend y frontend.
 
 ## Licencia
 

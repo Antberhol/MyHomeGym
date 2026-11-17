@@ -85,5 +85,5 @@ Con EVO-02 dejan de aplicar en Android: RI-01, FR-1.01 a FR-1.04, RN-1.01 a RN-1
 | RSG-01 | Pérdida de datos por fallo del disco del servidor | Media | Alto | Copia JSON periódica (FR-6.02); la carpeta de datos es un único directorio fácil de copiar. |
 | RSG-02 | El servicio de traducción gratuito desaparece o limita las peticiones | Media | Bajo | Caché permanente (RN-5.05) y modo sin traducción. |
 | RSG-03 | Cambian las reglas de Google Play o de Android | Alta | Medio | Revisar cada año los requisitos de [ANDROID.md](../ANDROID.md). |
-| RSG-04 | El mantenedor deja de tener tiempo | Media | Medio | Tests, CI, esta ERS y `CLAUDE.md` reducen el coste de retomar el proyecto. |
+| RSG-04 | El mantenedor deja de tener tiempo | Media | Medio | Tests, CI, esta ERS y `AGENTS.md` reducen el coste de retomar el proyecto. |
 | RSG-05 | Una librería pequeña (la figura anatómica) deja de mantenerse | Media | Bajo | Licencia MIT: se puede copiar dentro del proyecto. |
