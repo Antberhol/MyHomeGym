@@ -3,7 +3,7 @@
 
 # 0. Introduction, context and objectives
 
-[← SRS Index](../../es/requisitos/REQUISITOS_FUNCIONALES_Y_ACEPTACION.md)
+[← SRS Index](../../es/REQUISITOS_FUNCIONALES_Y_ACEPTACION.md)
 
 ## 0.1 Purpose
 
@@ -41,14 +41,14 @@ This document is the **Software Requirements Specification (SRS)** for MyHomeGym
 | Prefix | Element | File |
 | --- | --- | --- |
 | OBJ-nn | System objective | this file |
-| ACT-nn | Actor | [08](08-actores-y-casos-de-uso.md) |
-| CU-nn | Use case | [08](08-actores-y-casos-de-uso.md), [09](09-casos-de-uso-detallados.md) |
-| RI-nn | Information requirement (what data the system stores) | [10](10-requisitos-de-informacion.md) |
-| FR-m.nn | Functional requirement of module *m* | [01](01-cuenta-y-perfil.md) to [06](06-datos-y-configuracion.md) |
-| RN-m.nn | Business rule | [01](01-cuenta-y-perfil.md) to [06](06-datos-y-configuracion.md) |
-| AC-m.n | Acceptance test (*Given / When / Then*) | [01](01-cuenta-y-perfil.md) to [06](06-datos-y-configuracion.md) |
-| RNF-m.nn | Non-functional requirement with measurable criterion | [07](07-no-funcionales.md) |
-| RES-nn, SUP-nn, EVO-nn | Constraint, assumption, planned evolution | [11](11-restricciones-y-supuestos.md) |
+| ACT-nn | Actor | [08](../../es/requisitos/08-actores-y-casos-de-uso.md) |
+| CU-nn | Use case | [08](../../es/requisitos/08-actores-y-casos-de-uso.md), [09](../../es/requisitos/09-casos-de-uso-detallados.md) |
+| RI-nn | Information requirement (what data the system stores) | [10](../../es/requisitos/10-requisitos-de-informacion.md) |
+| FR-m.nn | Functional requirement of module *m* | [01](../../es/requisitos/01-cuenta-y-perfil.md) to [06](../../es/requisitos/06-datos-y-configuracion.md) |
+| RN-m.nn | Business rule | [01](../../es/requisitos/01-cuenta-y-perfil.md) to [06](../../es/requisitos/06-datos-y-configuracion.md) |
+| AC-m.n | Acceptance test (*Given / When / Then*) | [01](../../es/requisitos/01-cuenta-y-perfil.md) to [06](../../es/requisitos/06-datos-y-configuracion.md) |
+| RNF-m.nn | Non-functional requirement with measurable criterion | [07](../../es/requisitos/07-no-funcionales.md) |
+| RES-nn, SUP-nn, EVO-nn | Constraint, assumption, planned evolution | [11](../../es/requisitos/11-restricciones-y-supuestos.md) |
 
 **Attributes of each requirement** (shown when they add information):
 
@@ -90,4 +90,4 @@ People who train strength at home usually log their sets in a notebook, in phone
 | OBJ-07 | Guarantee data ownership and privacy | The system shall store data in the user's own infrastructure, isolate it between users and allow exporting, restoring and deleting it. | Must | High |
 | OBJ-08 | Be usable on mobile and in two languages | The system shall be usable with one hand on a mobile, installable as an app and work in Spanish and English. | Must | Medium |
 
-**Sub-objectives and relation to use cases:** see the OBJ × CU matrix in [13-trazabilidad.md](13-trazabilidad.md).
+**Sub-objectives and relation to use cases:** see the OBJ × CU matrix in [13-trazabilidad.md](../../es/requisitos/13-trazabilidad.md).
