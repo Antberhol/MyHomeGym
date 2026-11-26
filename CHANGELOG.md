@@ -12,6 +12,7 @@ Todos los cambios relevantes de MyHomeGym. El formato sigue [Keep a Changelog](h
 
 ### Añadido
 - Traducción al inglés del módulo 00 de requisitos (docs/en/requirements/00-introduccion.md).
+- Traducción al inglés del módulo 01 de requisitos (docs/en/requirements/01-cuenta-y-perfil.md).
 - Tests unitarios para `units.js` y `text.js` (`frontend/tests/unit/units-and-text.test.js`): conversiones, round trips y normalización de nombres.
 
 - `SECURITY.md`: qué datos guarda la app, qué conexiones hace y cómo avisar de un fallo de seguridad en privado.
